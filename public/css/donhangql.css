@@ -1,0 +1,141 @@
+ .container-order {
+     max-width: 1000px;
+     margin: 40px auto;
+     font-family: Arial, sans-serif;
+     color: #000000;
+ }
+
+ h2 {
+     text-align: center;
+     margin-bottom: 25px;
+ }
+
+ .search-filter {
+     display: flex;
+     gap: 10px;
+     margin-bottom: 20px;
+ }
+
+ .search-filter input,
+ .search-filter select {
+     padding: 6px 10px;
+     border-radius: 5px;
+     border: 1px solid #ccc;
+ }
+
+ .table-orders {
+     width: 100%;
+     border-collapse: collapse;
+     background: #fff;
+     border-radius: 10px;
+     overflow: hidden;
+
+ }
+
+ .table-orders th,
+ .table-orders td {
+     padding: 10px;
+     border-bottom: 1px solid #eee;
+     text-align: left;
+
+ }
+
+ .table-orders th {
+     background: #f5f5f5;
+ }
+
+ .table-orders tr:hover {
+     background: #fafafa;
+ }
+
+ .status {
+     padding: 5px 10px;
+     border-radius: 5px;
+     font-weight: bold;
+ }
+
+ .status.cho_xac_nhan {
+     background: #fff3cd;
+     color: #856404;
+ }
+
+ .status.dang_giao {
+     background: #cce5ff;
+     color: #004085;
+ }
+
+ .status.hoan_thanh {
+     background: #d4edda;
+     color: #155724;
+ }
+
+ .status.huy {
+     background: #f8d7da;
+     color: #721c24;
+ }
+
+ .btn {
+     padding: 6px 12px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+
+ .btn-success {
+     background: #4CAF50;
+     color: white;
+ }
+
+ .btn-success:hover {
+     background: #43a047;
+ }
+
+ .pagination {
+     text-align: center;
+     margin-top: 20px;
+ }
+
+ .pagination .page-link {
+     margin: 0 5px;
+     text-decoration: none;
+     color: #333;
+ }
+
+ .pagination .active {
+     font-weight: bold;
+     color: #007bff;
+ }
+
+ .trang-thai-select {
+     padding: 5px 8px;
+     border-radius: 6px;
+     border: 1px solid #ccc;
+     background-color: #fff;
+     cursor: pointer;
+     font-weight: 600;
+ }
+
+ .trang-thai-select:hover {
+     border-color: #007bff;
+ }
+
+ .btn-save {
+     background-color: #2196F3;
+     color: #fff;
+     border: none;
+     padding: 6px 12px;
+     border-radius: 6px;
+     cursor: pointer;
+     font-weight: 600;
+     transition: 0.3s;
+ }
+
+ .btn-save:hover {
+     background-color: #1976D2;
+ }
+
+ .trang-thai-select {
+     padding: 5px 8px;
+     border-radius: 6px;
+     border: 1px solid #ccc;
+ }

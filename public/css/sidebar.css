@@ -1,0 +1,432 @@
+/* Khung sidebar */
+body,
+html {
+    font-family: 'Roboto', sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar dark mode */
+.dark-mode .sidebar-custom {
+    background: #18191a;
+    color: #e4e6eb;
+}
+
+/* Box trong sidebar */
+.dark-mode .box-invite,
+.dark-mode .box-suggest,
+.dark-mode .box-friends {
+    background: #242526;
+
+    box-shadow: none;
+    border: none;
+}
+
+.dark-mode .invite-item .invite-name,
+.dark-mode .suggest-item .suggest-name {
+    color: #ffffff;
+}
+
+/* Item trong các box */
+.dark-mode .invite-item,
+.dark-mode .suggest-item,
+.dark-mode .friend-item {
+    background: #505050b7;
+    color: #e4e6eb;
+    box-shadow: none;
+    border: 1px solid #3e4042;
+}
+
+/* Avatar */
+.dark-mode .avatar-invite,
+.dark-mode .avatar-suggest,
+.dark-mode .friend-item img {
+    border: 1px solid #686868;
+}
+
+.dark-mode .box-friends .friend-item {
+    background: #505050b7;
+    color: #e4e6eb;
+    box-shadow: none;
+    border: 1px solid #3e4042;
+}
+
+/* Hover hiệu ứng */
+.dark-mode .invite-item:hover,
+.dark-mode .suggest-item:hover,
+.dark-mode .friend-item:hover {
+    background-color: #bbbbbb;
+    transform: translateY(-1px);
+    cursor: pointer;
+}
+
+/* Nút trong dark mode */
+.dark-mode .btn-accept {
+    background: #2374e1;
+    color: #fff;
+}
+
+.dark-mode .btn-accept:hover {
+    background: #21426d;
+}
+
+.dark-mode .btn-decline {
+    background: #e41e3f;
+    color: #fff;
+}
+
+.dark-mode .btn-decline:hover {
+    background: #b91c33;
+}
+
+.dark-mode .btn-add-friend {
+    background: #2374e1;
+    color: #fff;
+}
+
+.dark-mode .btn-add-friend:hover {
+    background: #21426d;
+}
+
+/* Link xem thêm */
+.dark-mode .btn-xem-them {
+    color: #4599ff;
+}
+
+.dark-mode .btn-xem-them:hover {
+    text-decoration: underline;
+}
+
+.dark-mode .sidebar-toggle,
+.dark-mode .sidebar-toggle-left {
+    background: #272829;
+    color: #d1d1d1;
+}
+
+/* Box chung */
+.invite-item {
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Đẩy avatar - tên - nút ra hai bên */
+    margin-bottom: 10px;
+    gap: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.invite-item .avatar-invite {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.invite-item .invite-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.invite-item .invite-name {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+    display: block;
+}
+
+.invite-item .invite-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.invite-item .btn-accept,
+.invite-item .btn-decline {
+    width: 70px;
+    /* 👈 Hai nút luôn bằng nhau */
+    border: none;
+    padding: 6px 0;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.2s ease;
+}
+
+.btn-accept {
+    background: #2374e1;
+    color: #fff;
+}
+
+.btn-accept:hover {
+    background: #1e63c5;
+}
+
+.btn-decline {
+    background: #e41e3f;
+    color: #fff;
+}
+
+.btn-decline:hover {
+    background: #b91c33;
+}
+
+
+.invite-item:hover {
+    background-color: #bbbbbb;
+    transform: translateY(-1px);
+    cursor: pointer;
+}
+
+/* --------- Gợi ý bạn bè --------- */
+.suggest-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #d1d0d0;
+    border-radius: 8px;
+    padding: 15px 10px;
+    margin-bottom: 8px;
+}
+
+.suggest-item:hover {
+    background-color: #bbbbbb;
+    transform: translateY(-1px);
+    cursor: pointer;
+}
+
+.suggest-item .avatar-suggest {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.suggest-item .suggest-name {
+    flex: 1;
+    margin: 0;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+    font-weight: bold;
+    color: #494949;
+}
+
+.btn-add-friend {
+    border: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    background: #2374e1;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn-add-friend:hover {
+    background: #3c5a83;
+}
+
+/* --------- Danh sách bạn bè --------- */
+.box-friends .friends-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 200px;
+    /* cuộn được */
+    overflow-y: auto;
+}
+
+.box-friends .friend-item {
+    display: flex;
+    align-items: center;
+    background: #fcfcfc;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #636363;
+    max-width: 320px;
+    transition: transform 0.25s ease;
+}
+
+.box-friends .friend-item img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.friend-item span.friend-name {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+    /* 👈 giới hạn để hiện … khi quá dài */
+}
+
+.friend-item:hover {
+    background-color: #bbbbbb;
+    transform: translateY(-1px);
+    cursor: pointer;
+}
+
+/* --------- Link xem thêm --------- */
+.btn-xem-them {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #4599ff;
+    text-decoration: none;
+}
+
+.btn-xem-them:hover {
+    text-decoration: underline;
+}
+
+.sidebar-right {
+    width: 300px;
+    background: #fff;
+
+    padding: 15px;
+    position: fixed;
+    right: 0;
+    top: 50;
+    bottom: 0;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Nút menu 3 gạch */
+.sidebar-toggle {
+    display: none;
+    /* Ẩn khi màn hình to */
+    position: fixed;
+    top: 65px;
+    right: 2px;
+
+    z-index: 1100;
+    background: #ffffff6b;
+    color: #000000;
+    border: none;
+    font-size: 24px;
+    padding: 8px 12px;
+    cursor: pointer;
+
+}
+
+/* Khi màn hình nhỏ */
+@media (max-width: 1024px) {
+    .sidebar-toggle {
+        display: block;
+        /* Hiện nút menu */
+    }
+
+    .sidebar-right {
+        transform: translateX(100%);
+        /* Ẩn sidebar */
+        width: 260px;
+        z-index: 1000;
+    }
+
+    .sidebar-right.active {
+        transform: translateX(0);
+        /* Hiện sidebar khi bấm nút */
+    }
+}
+
+.sidebar-left {
+    width: 250px;
+    background: #fff;
+    padding: 15px;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    bottom: 0;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-left a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+.sidebar-toggle-left {
+    display: none;
+    position: fixed;
+    top: 65px;
+    left: 2px;
+    z-index: 1100;
+    background: #ffffff6b;
+    color: #000000;
+    border: none;
+    font-size: 24px;
+    padding: 8px 12px;
+    cursor: pointer;
+
+}
+
+/* Mobile mode */
+@media (max-width: 1024px) {
+
+
+    .sidebar-left {
+        transform: translateX(-100%);
+        /* Ẩn sidebar */
+        width: 240px;
+        z-index: 1000;
+    }
+
+    .sidebar-left.active {
+        transform: translateX(0);
+        /* Hiện khi bấm */
+    }
+}
+
+.friends-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.friends-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.friends-list::-webkit-scrollbar-thumb {
+    background-color: rgba(122, 121, 121, 0.356);
+    border-radius: 3px;
+}
+
+.friends-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.unread-dot {
+    display: none;
+    width: 10px;
+    height: 10px;
+    background-color: #00c851;
+    border-radius: 50%;
+    margin-left: 6px;
+    vertical-align: middle;
+}

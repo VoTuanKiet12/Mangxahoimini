@@ -1,0 +1,102 @@
+ .search-container-page {
+     max-width: 650px;
+     margin: 50px auto;
+     background: #ffffff;
+     border-radius: 15px;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+     padding: 25px 35px;
+     font-family: "Segoe UI", sans-serif;
+ }
+
+ .page-title {
+     text-align: center;
+     font-weight: 700;
+     color: #1877f2;
+     margin-bottom: 20px;
+ }
+
+ .no-result,
+ .no-keyword {
+     text-align: center;
+     color: #777;
+     font-style: italic;
+     margin-top: 20px;
+ }
+
+ .result-list {
+     display: flex;
+     flex-direction: column;
+     gap: 12px;
+ }
+
+ .user-item {
+     display: flex;
+     align-items: center;
+     gap: 12px;
+     background: #f8f9fb;
+     border-radius: 12px;
+     padding: 10px 14px;
+     color: #000;
+     border: 1px solid transparent;
+     transition: all 0.25s ease;
+ }
+
+ .user-item:hover {
+     background: #e8f0ff;
+     border-color: #1877f2;
+     transform: scale(1.01);
+ }
+
+ .user-link {
+     display: flex;
+     align-items: center;
+     gap: 12px;
+     text-decoration: none;
+     color: inherit;
+     flex: 1;
+ }
+
+ .avatar {
+     width: 55px;
+     height: 55px;
+     border-radius: 50%;
+     object-fit: cover;
+     border: 2px solid #1877f2;
+ }
+
+ .user-info strong {
+     font-size: 16px;
+     color: #222;
+ }
+
+ .btn-add-friend,
+ .btn-pending,
+ .btn-friend {
+     border: none;
+     padding: 6px 12px;
+     border-radius: 20px;
+     font-size: 14px;
+     cursor: pointer;
+     transition: all 0.25s ease;
+ }
+
+ .btn-add-friend {
+     background: #1877f2;
+     color: #fff;
+ }
+
+ .btn-add-friend:hover {
+     background: #145dbf;
+ }
+
+ .btn-pending {
+     background: #e4e6eb;
+     color: #555;
+     cursor: default;
+ }
+
+ .btn-friend {
+     background: #42b72a;
+     color: #fff;
+     cursor: default;
+ }

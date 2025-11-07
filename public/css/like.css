@@ -1,0 +1,132 @@
+.dark-mode .reaction-summary {
+    color: #fff;
+}
+
+.reaction-box {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+
+/* Hộp chọn cảm xúc */
+.reaction-options {
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    transform: translateX(-50%) translateY(20px);
+    background: #fff;
+    border-radius: 30px;
+    padding: 6px 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    opacity: 0;
+    max-height: 42px;
+    pointer-events: none;
+    transition: all 0.25s ease-in-out;
+
+}
+
+/* Khi hover vào .reaction-box → hiển thị */
+.reaction-box:hover .reaction-options,
+.reaction-box.active .reaction-options {
+    opacity: 1;
+
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Phần tóm tắt cảm xúc */
+.reaction-summary {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: #000;
+}
+
+.reaction-icon {
+    font-size: 16px;
+    margin-right: 2px;
+}
+
+.reaction-count {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Icon trong hộp cảm xúc */
+.reaction-btn {
+    border: none;
+    background: transparent !important;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0;
+    padding: 0;
+}
+
+
+/* Nút Like chính */
+.like-btn {
+    font-size: 16px;
+    font-weight: 600;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.like-btn:hover {
+    color: #1877f2;
+    transform: scale(1.05);
+}
+
+.like-btn span {
+    font-size: 22px;
+    /* icon trong nút Like */
+    line-height: 1;
+}
+
+.icon-cx {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.reaction-options .reaction-btn img.icon-cx {
+    width: 32px;
+    height: 32px;
+    margin: 0 -7px;
+    transition: transform 0.2s;
+}
+
+.remove-react {
+    margin-bottom: 14px;
+}
+
+.reaction-options .reaction-btn:hover img.icon-cx {
+    transform: scale(1.3);
+}
+
+.reaction-summary {
+    transition: 0.3s;
+}
+
+.reaction-summary.updated {
+    transform: scale(1.2);
+}
+
+.animate-react {
+    transform: scale(1.2);
+    transition: 0.2s;
+}

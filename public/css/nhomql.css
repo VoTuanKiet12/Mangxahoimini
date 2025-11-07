@@ -1,0 +1,195 @@
+.dark-mode .group-container {
+    background-color: #2b2b2b;
+    color: #ffffff;
+}
+
+.dark-mode p {
+    color: #fff;
+}
+
+.dark-mode .member-table {
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+.dark-mode .member-table tr:hover {
+    background-color: #313131;
+}
+
+.group-container {
+    width: 90%;
+    max-width: 900px;
+    background-color: #fff;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    color: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 22px;
+    color: #8ed16e;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: #3498db;
+    margin: 10px 0 20px 0;
+}
+
+/* === Thông báo === */
+.alert {
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.alert.success {
+    background-color: #e8f7ee;
+    color: #2e7d32;
+    border-left: 5px solid #43a047;
+}
+
+.alert.error {
+    background-color: #fdecea;
+    color: #c62828;
+    border-left: 5px solid #e53935;
+}
+
+/* === Bảng === */
+.member-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.member-table th {
+    background-color: #3498db;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+}
+
+.member-table td {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.member-table tr:hover {
+    background-color: #f7f9fc;
+}
+
+/* === Avatar === */
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3498db33;
+}
+
+/* === Vai trò === */
+.badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.badge.thanh_vien {
+    background-color: #95a5a6;
+}
+
+.badge.quan_tri_vien {
+    background-color: #1abc9c;
+}
+
+.badge.chu_nhom {
+    background-color: #acd156;
+}
+
+/* === Form nội dòng === */
+.inline-form {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+}
+
+/* === Nút === */
+.btn {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-blue {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.btn-blue:hover {
+    background-color: #2980b9;
+}
+
+.btn-red {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.btn-red:hover {
+    background-color: #c0392b;
+}
+
+/* === Select vai trò === */
+.role-select {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 5px 8px;
+    font-size: 13px;
+    background-color: #fff;
+}
+
+.role-select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 3px #3498db66;
+}
+
+/* === Responsive === */
+@media (max-width: 700px) {
+
+    .member-table th,
+    .member-table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .inline-form {
+        flex-direction: column;
+        gap: 4px;
+    }
+}

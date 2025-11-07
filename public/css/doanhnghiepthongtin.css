@@ -1,0 +1,123 @@
+ .info-grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 25px;
+     max-width: 1300px;
+     margin: 20px auto;
+     padding: 20px;
+ }
+
+ .info-box {
+     background-color: #fff;
+     border-radius: 12px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.329);
+     padding: 25px 30px;
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     height: 350px;
+     /* ✅ Chiều cao cố định */
+ }
+
+ .info-box:hover {
+     transform: scale(1.02);
+     box-shadow: 0 4px 10px rgba(20, 20, 20, 0.514);
+ }
+
+ .info-box h3 {
+     font-size: 18px;
+     color: #41465c;
+     margin-bottom: 15px;
+     text-align: center;
+ }
+
+ .info-box p {
+     font-size: 16px;
+     color: #333;
+     margin: 10px 0;
+     background: #f8f8f8;
+     padding: 10px 12px;
+     border-radius: 6px;
+ }
+
+ .info-box strong {
+     color: #000;
+ }
+
+ .status {
+     display: inline-block;
+     padding: 6px 12px;
+     border-radius: 6px;
+     font-weight: bold;
+     color: white;
+     font-size: 14px;
+ }
+
+ .status.hoat_dong {
+     background: #7cf346;
+     color: #000;
+ }
+
+ .status.cho_duyet {
+     background: #ffc107;
+     color: #000;
+ }
+
+ .status.tu_choi {
+     background: #dc3545;
+ }
+
+ .edit-btn {
+     display: block;
+     text-align: center;
+     background: #475666;
+     color: #fff;
+     padding: 10px;
+     width: 150px;
+     border-radius: 8px;
+     text-decoration: none;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 15px;
+     transition: background 0.3s;
+ }
+
+ .edit-btn:hover {
+     background: #607081;
+ }
+
+ .info-logo-dn {
+     text-align: center;
+     margin-top: 15px;
+ }
+
+ .info-logo-dn img {
+     width: 260px;
+     height: 260px;
+     object-fit: cover;
+     border-radius: 50%;
+     border: 2px solid #eee;
+ }
+
+ /* ✅ Box chiếm 2 cột có chiều cao riêng */
+ .info-box.full {
+     grid-column: span 2;
+     height: 250px;
+ }
+
+ /* Responsive */
+ @media (max-width: 900px) {
+     .info-grid {
+         grid-template-columns: 1fr;
+     }
+
+     .info-box {
+         height: auto;
+         /* Trên điện thoại cho co giãn */
+     }
+
+     .info-box.full {
+         grid-column: span 1;
+     }
+ }

@@ -1,0 +1,287 @@
+.containerqlsp {
+    max-width: 80%;
+    margin: 10px auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    color: #000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.containerqlsp h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.alert {
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: #fff;
+}
+
+.btn-warning {
+    background: #ffc107;
+    color: #000;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: #fff;
+}
+
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.danhgia {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: #ffffff;
+    border: none;
+    background: #7579a1;
+}
+
+.danhgia:hover {
+    opacity: 0.85;
+}
+
+.containerqlsp table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    color: #000;
+}
+
+.containerqlsp thead {
+    background-color: #f3f3f3;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+td {
+    vertical-align: middle;
+}
+
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.bg-success {
+    background-color: #28a745;
+}
+
+.bg-danger {
+    background-color: #dc3545;
+}
+
+.bg-secondary {
+    background-color: #6c757d;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination svg {
+    width: 20px;
+    height: 20px;
+}
+
+.product-img {
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+    /* hiển thị toàn bộ ảnh, giữ nguyên tỉ lệ */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    display: block;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    /* nền nhẹ để dễ nhìn khi ảnh không đủ khung */
+}
+
+.btn-page-go {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-page-go:hover {
+    background-color: #45a049;
+
+}
+
+
+
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    /* 👈 form trái, phân trang phải */
+    align-items: center;
+    /* 👈 canh giữa theo chiều dọc */
+    margin-top: 20px;
+    flex-wrap: wrap;
+    /* tránh vỡ layout trên màn nhỏ */
+}
+
+.pagination-form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.trang {
+    color: #000000;
+}
+
+.page-input {
+    width: 60px;
+    text-align: center;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-page-go {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.btn-page-go:hover {
+    background-color: #45a049;
+}
+
+/* canh phân trang Laravel sang phải */
+.pagination-links nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.actions-left {
+    display: flex;
+    gap: 10px;
+}
+
+.pagination-formtop {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.page-input {
+    width: 60px;
+    text-align: center;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-page-go {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.btn-page-go:hover {
+    background-color: #45a049;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.pagination .page-link {
+    background-color: #ffffff;
+    border: 1.5px solid #000000;
+    color: #000000;
+    border-radius: 6px;
+    padding: 8px 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.pagination .page-link:hover {
+    background-color: #384553;
+    color: #ffffff;
+}
+
+.pagination .active .page-link {
+    background-color: #526479;
+    border-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.pagination .disabled .page-link {
+    background-color: #f8f9fa;
+    color: #aaa;
+    cursor: not-allowed;
+}

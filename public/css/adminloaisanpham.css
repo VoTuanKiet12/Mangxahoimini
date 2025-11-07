@@ -1,0 +1,112 @@
+.container-loai {
+    max-width: 80%;
+    margin: 10px auto;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    margin-bottom: 70px;
+}
+
+.title {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 25px;
+}
+
+.alert.success {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.form-add {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.form-add input {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-add button {
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.form-add button:hover {
+    background: #0056b3;
+}
+
+.loai-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.loai-table th,
+.loai-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.loai-table th {
+    background: #f5f5f5;
+}
+
+.inline-form {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+.inline-form input {
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 140px;
+}
+
+.btn-update {
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.btn-update:hover {
+    background: #218838;
+}
+
+.btn-delete:hover {
+    background: #c82333;
+}
+
+.empty {
+    color: #777;
+    text-align: center;
+    font-style: italic;
+}

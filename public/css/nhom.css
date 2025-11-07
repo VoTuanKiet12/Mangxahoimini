@@ -1,0 +1,392 @@
+.dark-mode .invite-notify-nhom {
+    color: rgb(255, 255, 255);
+    background-color: #222;
+}
+
+.dark-mode .invite-item-nhom {
+    color: rgb(255, 255, 255);
+    background-color: #414141;
+}
+
+.dark-mode .invite-info-nhom span,
+.dark-mode .container-nhom h3 {
+    color: #ececec;
+}
+
+.dark-mode .invite-item-nhom:hover {
+    background-color: #777777;
+}
+
+
+
+
+
+.container-nhom {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 16px;
+    font-family: Arial, sans-serif;
+}
+
+.container-nhom h3 {
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.empty-box {
+    text-align: center;
+    color: #777;
+    padding: 50px 0;
+}
+
+.empty-box i {
+    font-size: 48px;
+    color: #aaa;
+}
+
+.group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.group-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.group-card:hover {
+    transform: translateY(-3px);
+}
+
+.group-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    background: #f0f0f0;
+}
+
+.group-content {
+    flex: 1;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.group-title {
+    font-weight: bold;
+    color: #222;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.group-desc {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.group-badge {
+    display: inline-block;
+    background: #e7f3ff;
+    color: #007bff;
+    padding: 3px 8px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.group-creator {
+    font-size: 13px;
+    color: #777;
+}
+
+/* ===== Nút xem và mời ===== */
+.group-btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-view,
+.btn-invite {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-view {
+    background: #3d5166;
+    color: #fff;
+}
+
+.btn-view:hover {
+    background: #82b8f1;
+}
+
+.btn-invite {
+    background: #72dd58;
+    color: #fff;
+}
+
+.btn-invite:hover {
+    background: #3d9c53;
+}
+
+
+
+
+/* ===== Overlay mời bạn ===== */
+.invite-overlaynhom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.invite-boxnhom {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.invite-boxnhom h4 {
+    margin-bottom: 12px;
+    color: #000000;
+}
+
+.friend-itemnhom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px black;
+    background-color: #f5f5f5;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.friend-itemnhom:hover {
+    background-color: #dbdbdb;
+}
+
+.friend-itemnhom button {
+    background: #8dc532;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.friend-itemnhom button:hover {
+    background: #0056b3;
+}
+
+
+
+
+.btn-create {
+    display: inline-block;
+    background: #9bda36;
+    margin-bottom: 20px;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn-create:hover {
+    background: #1e7e34;
+}
+
+
+
+.invite-notify-nhom {
+    background-color: #fffffff3;
+    border: 1px solid #dce3f0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.invite-notify-nhom h4 {
+    color: #004aad;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+.invite-item-nhom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-radius: 15px;
+    height: 40px;
+    background-color: #ffffffe1;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.589);
+}
+
+.invite-item-nhom:first-child {
+    border-top: none;
+}
+
+.invite-item-nhom:hover {
+    background-color: #e2e2e2;
+}
+
+.invite-info-nhom span {
+    font-size: 14px;
+    color: #666;
+    margin-left: 5px;
+}
+
+.btn-accept,
+.btn-reject,
+.btn-more {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-accept {
+    background: #28a745;
+    color: #fff;
+}
+
+.btn-reject {
+    background: #dc3545;
+    color: #fff;
+}
+
+.btn-more {
+    background: #dbdbdbd2;
+    color: #000000;
+    width: 40px;
+    height: 40px;
+}
+
+.btn-accept:hover {
+    background: #218838;
+}
+
+.btn-reject:hover {
+    background: #c82333;
+}
+
+.btn-more:hover {
+    background: #d6d6d6;
+}
+
+/* --- Overlay kiểu popup --- */
+.overlay-nhom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 4000;
+}
+
+.overlay-nhom.show {
+    display: flex;
+}
+
+.overlay-box {
+    background: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 15px;
+    width: 260px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    justify-items: center;
+    color: #000000;
+    animation: popIn 0.25s ease;
+}
+
+.overlay-item {
+    display: block;
+    padding: 10px;
+    margin-bottom: 6px;
+    border: none;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    width: 150px;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.2s;
+}
+
+.overlay-item:hover {
+    background: #e9ecef;
+}
+
+.overlay-item.edit {
+    background: #f7c02a;
+    color: white;
+}
+
+.overlay-item.edit:hover {
+    background: #c59e34;
+
+}
+
+.overlay-item.delete {
+    background: #dc3545;
+    color: white;
+}
+
+.overlay-item.delete:hover {
+    background: #b02a37;
+}
+
+
+@keyframes popIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

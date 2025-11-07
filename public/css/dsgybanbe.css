@@ -1,0 +1,81 @@
+/* 🌤️ Gợi ý bạn bè đầy khung */
+/* 🌙 Dark mode */
+.dark-mode .dsgyfriend-item {
+    background: #242526;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .dsgyfriend-item:hover {
+    background: #333;
+}
+
+.dark-mode .dsgyfriend-details strong {
+    color: #fff;
+}
+
+.dark-mode .mutual-count {
+    color: #aaa;
+}
+
+.dsgyfriend-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background 0.25s, transform 0.15s;
+}
+
+.dsgyfriend-item:hover {
+    background: #f2f2f2;
+    transform: translateY(-2px);
+}
+
+.dsgyfriend-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 👤 Thông tin bạn bè */
+.dsgyfriend-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.avatar-suggest {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.dsgyfriend-details strong {
+    font-weight: 600;
+    font-size: 17px;
+    color: #111;
+}
+
+.mutual-count {
+    font-size: 13px;
+    color: #666;
+}
+
+/* ⚙️ Hành động */
+.dsgyfriend-actions {
+    flex-shrink: 0;
+}
+
+.dsgyfriend-actions .btn {
+    padding: 7px 14px;
+    font-size: 14px;
+    border-radius: 8px;
+}

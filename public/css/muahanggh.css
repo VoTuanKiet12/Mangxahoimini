@@ -1,0 +1,247 @@
+body {
+    background: #fff !important;
+}
+
+
+.checkout-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px 70px;
+    font-family: "Inter", sans-serif;
+}
+
+/* ====== CỘT TRÁI ====== */
+.checkout-left {
+    flex: 1.2;
+    min-width: 60%;
+}
+
+.checkout-left h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 25px;
+    margin-left: -45px;
+
+}
+
+.checkout-left .so {
+    background-color: #b94c4c;
+    color: #fff;
+    padding: 5px 11px;
+    border-radius: 50%;
+}
+
+.checkout-left .so2 {
+    background-color: #b94c4c;
+    color: #fff;
+    padding: 5px 11px;
+    border-radius: 50%;
+
+}
+
+/* ====== FORM ====== */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #ffffff;
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+.form-control:focus {
+    border-color: #4a90e2;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
+    outline: none;
+}
+
+/* ====== RADIO + CHECKBOX ====== */
+.payment-methods {
+    margin-top: 10px;
+}
+
+.payment-methods label {
+    cursor: pointer;
+    font-size: 15px;
+    color: #333;
+    display: block;
+    margin-bottom: 6px;
+    transition: color 0.2s;
+}
+
+.payment-methods input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #007bff;
+}
+
+.payment-methods label:hover {
+    color: #007bff;
+}
+
+.agree {
+    margin-top: 15px;
+}
+
+.agree a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.agree a:hover {
+    text-decoration: underline;
+}
+
+/* ====== NÚT ====== */
+.btn {
+    display: inline-block;
+    width: 100%;
+    background: linear-gradient(135deg, #c04232, #d65d5d);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #da4b38, #b94c4c);
+
+}
+
+/* ====== ALERT ====== */
+.alert {
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.alert-danger {
+    background: #ffe5e5;
+    color: #b30000;
+    border: 1px solid #ffcccc;
+}
+
+/* ====== CỘT PHẢI ====== */
+.order-summary {
+    flex: 0.8;
+    min-width: 300px;
+    background: #f9fafb;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.order-summary h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.summary-images {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.summary-images img {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.order-summary p {
+    font-size: 15px;
+    margin: 6px 0;
+    color: #333;
+}
+
+.order-detail {
+    margin: 10px 0px;
+}
+
+.order-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    color: #333;
+    margin: 20px 0;
+}
+
+.order-line.discount span:last-child {
+    color: #e53935;
+}
+
+.order-line.total strong {
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.order-line .vat {
+    color: #f55d5d;
+}
+
+.order-line .pvc {
+    color: #5994ac;
+}
+
+.order-line.total .tong {
+    color: #f55d5d;
+}
+
+.summary-images {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.summary-images img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 992px) {
+    .checkout-container {
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .order-summary {
+        width: 100%;
+        margin-top: 30px;
+    }
+}

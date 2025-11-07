@@ -1,0 +1,90 @@
+/* Khung chứa form */
+.register-container {
+    max-width: 600px;
+    background: #fff;
+    margin: 50px auto;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+.register-container h3 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* Nhóm form */
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label */
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #34495e;
+}
+
+/* Input & textarea */
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group textarea {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 15px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Hiệu ứng focus */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* Nút gửi */
+.btn-submit {
+    width: 100%;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #0056b3, #004080);
+    transform: translateY(-2px);
+}
+
+.img-preview {
+    border: 1px solid #ddd;
+    padding: 4px;
+    background: #f9f9f9;
+    margin-top: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 100px;
+    object-fit: cover;
+}
+
+/* Responsive mobile */
+@media (max-width: 480px) {
+    .register-container {
+        padding: 20px;
+        margin: 30px 10px;
+    }
+}

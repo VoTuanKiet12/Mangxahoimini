@@ -1,0 +1,106 @@
+   .dark-mode h3 {
+       color: #ffffff;
+   }
+
+   .chu {
+       color: #222;
+   }
+
+   .container {
+       max-width: 800px;
+       margin: 20px auto;
+       padding: 10px;
+       font-family: Arial, sans-serif;
+   }
+
+   h3 {
+       margin-bottom: 20px;
+       color: #333;
+   }
+
+   .alert {
+       background: #eef2f7;
+       border: 1px solid #ccd2da;
+       padding: 10px;
+       border-radius: 5px;
+       color: #555;
+   }
+
+   .card {
+       border: 1px solid #ddd;
+       border-radius: 10px;
+       margin-bottom: 20px;
+       background: #fff;
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+   }
+
+   .card-header {
+       background: #f8f8f8;
+       padding: 10px 15px;
+       border-bottom: 1px solid #ddd;
+       font-weight: bold;
+       color: #333;
+   }
+
+   .badge {
+       background: #999;
+       color: #fff;
+       padding: 2px 6px;
+       border-radius: 4px;
+       font-size: 12px;
+   }
+
+   .float-end {
+       float: right;
+       font-size: 13px;
+       color: #777;
+   }
+
+   .card-body {
+       padding: 15px;
+   }
+
+   .order-item {
+       display: flex;
+       border-bottom: 1px solid #eee;
+       padding-bottom: 10px;
+       margin-bottom: 10px;
+   }
+
+   .order-item img {
+       width: 80px;
+       height: 80px;
+       object-fit: cover;
+       border-radius: 8px;
+       margin-right: 15px;
+   }
+
+   .order-item h6 {
+       margin: 0;
+       color: #222;
+       font-size: 15px;
+   }
+
+   .order-item p {
+       margin: 2px 0;
+       font-size: 14px;
+   }
+
+   .text-danger {
+       color: #d9534f;
+   }
+
+   .btn-delete-order {
+       background: #ff4d4d;
+       color: #fff;
+       border: none;
+       border-radius: 6px;
+       padding: 6px 12px;
+       cursor: pointer;
+       font-size: 14px;
+       transition: 0.2s;
+   }
+
+   .btn-delete-order:hover {
+       background: #d93636;
+   }

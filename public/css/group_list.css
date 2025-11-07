@@ -1,0 +1,131 @@
+body,
+html {
+    font-family: 'Roboto', sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+body.dark-mode,
+html.dark-mode {
+    background: #18191a;
+    color: #e4e6eb;
+}
+
+.dark-mode .container,
+.dark-mode #createGroupForm {
+    background: #242526;
+    color: #e4e6eb;
+    box-shadow: none;
+}
+
+.dark-mode h2 {
+    color: #ffffff;
+}
+
+.dark-mode .container li,
+.dark-mode .container li a,
+.dark-mode .container li strong {
+    color: #ffffff;
+    background-color: rgb(46, 47, 48);
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container li {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container li strong {
+    font-size: 16px;
+    color: #1f2937;
+    flex-grow: 1;
+}
+
+.container li a {
+    margin-left: 10px;
+    padding: 6px 12px;
+    background-color: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.container li a:hover {
+    background-color: #2563eb;
+}
+
+p {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+.container p a {
+    text-decoration: none;
+    color: #10b981;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.container p a:hover {
+    text-decoration: underline;
+    color: #059669;
+}
+
+#createGroupForm {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#createGroupForm input[type="text"] {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#createGroupForm button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#createGroupForm button:hover {
+    background-color: #0056b3;
+}

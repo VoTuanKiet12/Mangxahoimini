@@ -1,0 +1,390 @@
+.dark-mode .reaction-summary {
+    color: #fff;
+}
+
+.dark-mode .overlay-content,
+.dark-mode .binh_luan,
+.dark-mode .post-box-bv,
+.dark-mode #comments-area {
+    color: #fff;
+    background: #252525;
+}
+
+.dark-mode .comment-content {
+    color: #fff;
+    background: #616060;
+}
+
+
+.dark-mode .comment-content small,
+.dark-mode .noi-dung-bv,
+.dark-mode .name-bv,
+.dark-mode .n-bv,
+.dark-mode .nd-bv,
+.dark-mode .add-image-btn {
+    color: #fff;
+}
+
+.post-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 5px;
+    margin-top: 10px;
+
+}
+
+.post-images-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.overlay-content {
+    background: #ffffff;
+    color: #000000;
+    padding: 20px;
+    width: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    max-height: 80%;
+}
+
+.comment-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 22px;
+    position: relative;
+}
+
+/* Avatar */
+.comment-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+
+
+.comment-content {
+    background-color: #f0f2f5;
+    color: #050505;
+    padding: 10px 12px;
+    padding-right: 20px;
+    border-radius: 18px;
+    min-width: 200px;
+
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+
+/* Hiện nút xóa khi hover bình luận */
+
+
+.namebl {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.namebl .delete-comment-form {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 2px;
+    padding: 0;
+}
+
+/* nút xóa */
+.delete-comment-btn {
+    background: transparent;
+    border: none;
+    color: #a15959;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.delete-comment-btn:hover {
+    color: #e41e3f;
+}
+
+.comment-content p {
+    margin: 0;
+}
+
+/* Thời gian đăng */
+.comment-content small {
+    display: block;
+    font-size: 12px;
+    color: #65676b;
+    margin-top: 3px;
+}
+
+/* ===== NÚT HÀNH ĐỘNG ===== */
+
+/* Nút xóa */
+
+
+#comments-area {
+    background-color: #ffffff;
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 0;
+    margin-right: 0;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+}
+
+#comments-area::-webkit-scrollbar {
+    width: 6px;
+}
+
+#comments-area::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#comments-area::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+
+
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-form {
+    margin-top: 10px;
+    display: flex;
+}
+
+.comment-form input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.name-bv {
+    color: #050505;
+}
+
+.n-bv {
+    color: #000000;
+    margin-left: auto;
+    font-size: 12px;
+}
+
+.nd-bv {
+    color: #000000;
+    margin-top: 10px;
+    margin-left: 10px;
+    overflow-wrap: break-word;
+}
+
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    margin-top: 50%;
+    color: #555;
+    font-size: 14px;
+    animation: fadeIn 0.3s ease;
+}
+
+.spinner {
+    width: 35px;
+    height: 35px;
+    border: 4px solid #000000;
+    border-top-color: #d0f56a;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 8px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+.binh_luan {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    background: transparent;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* === KHUNG XEM TRƯỚC === */
+.preview-box {
+    position: relative;
+    align-self: flex-start;
+    display: inline-block;
+
+}
+
+.preview-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+/* Nút xóa ảnh */
+#removePreviewbl {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    color: red;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    padding: 2px 4px;
+}
+
+#removePreviewbl:hover {
+    background: #f8d7da;
+}
+
+/* Khu nhập bình luận */
+.comment-input-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-image-btn {
+    font-size: 20px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.add-image-btn:hover {
+    color: #007bff;
+}
+
+.viet_bl {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    resize: none;
+}
+
+.gui_bl {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.gui_bl i {
+    color: white;
+    font-size: 14px;
+
+}
+
+.gui_bl:hover {
+    background-color: rgb(53, 57, 80);
+}
+
+
+.imagebl {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.image-overlaybl {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-imagebl {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.post-box-bv {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    background-color: #ffffff;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

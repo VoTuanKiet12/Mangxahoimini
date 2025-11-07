@@ -1,0 +1,217 @@
+.profile-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: #000000;
+}
+
+.cover-photo img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: #eee;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    margin-top: -60px;
+}
+
+
+.profile-info h2 {
+    margin: 0;
+    margin-top: 70px;
+    font-size: 22px;
+}
+
+.username {
+    color: #666;
+}
+
+.role {
+    color: #888;
+    margin-top: 4px;
+}
+
+.user-details {
+    padding: 15px 25px;
+    border-top: 1px solid #eee;
+}
+
+.user-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.user-details li {
+    margin-bottom: 8px;
+}
+
+.user-posts {
+    padding: 15px 25px;
+    border-top: 1px solid #eee;
+}
+
+.post-box {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background: #fafafa;
+}
+
+.post-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+.friend-action {
+    margin-top: 8px;
+}
+
+.friend-action {
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.friend-action form {
+    display: inline-block;
+}
+
+/* Các nút chung */
+.btn-add-friendpr,
+.btn-acceptpr,
+.btn-declinepr,
+.btn-unfriendpr {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+/* Nút “Kết bạn” */
+.btn-add-friendpr {
+    background: #36a420;
+    color: #fff;
+}
+
+.btn-add-friendpr:hover {
+    background: #6fe757;
+}
+
+/* Nút “Xác nhận” */
+.btn-acceptpr {
+    background: #42b72a;
+    color: #fff;
+}
+
+.btn-acceptpr:hover {
+    background: #36a420;
+}
+
+/* Nút “Từ chối” */
+.btn-declinepr {
+    background: #e4e6eb;
+    color: #333;
+}
+
+.btn-declinepr:hover {
+    background: #d8dadf;
+}
+
+/* Nút “Hủy kết bạn” */
+.btn-unfriendpr {
+    background: #f02849;
+    color: #fff;
+}
+
+.btn-unfriendpr:hover {
+    background: #d8203c;
+}
+
+.cover-photo {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.cover-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.update-cover-form {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.btn-change-cover {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+    z-index: 3;
+}
+
+.btn-change-cover:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* --- Ảnh đại diện --- */
+.avatar-wrapper {
+    position: relative;
+    display: inline-block;
+    z-index: 4;
+}
+
+.avatar-wrapper .avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    object-fit: cover;
+    margin-right: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.267);
+}
+
+
+.btn-change-avatar {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    background: rgba(0, 0, 0, 0.747);
+    color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.btn-change-avatar:hover {
+    background: rgba(116, 116, 116, 0.8);
+}
