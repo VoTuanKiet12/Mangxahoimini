@@ -49,10 +49,6 @@ COPY --from=builder /var/www/html /var/www/html
 COPY --from=builder /usr/bin/composer /usr/bin/composer
 
 # Copy file cấu hình nginx và supervisor
-COPY docker/nginx.conf /etc/nginx/sites-available/default
-COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-COPY docker/start.sh /start.sh
-RUN chmod +x /start.sh
 
 # Thiết lập quyền cho storage và cache
 WORKDIR /var/www/html
