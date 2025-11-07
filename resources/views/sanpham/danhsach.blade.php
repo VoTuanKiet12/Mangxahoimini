@@ -5,7 +5,7 @@
 
 @section('full')
 <div class="page-wrapper">
-    {{-- Cột trái cố định --}}
+
     <div class="sidebar-left">
         <ul>
         </ul>
@@ -49,7 +49,7 @@
 
             <div class="product-card">
                 <a href="{{ route('sanpham.chitiet', $sp->id) }}" class="product-link">
-                    {{-- Ảnh sản phẩm --}}
+
                     <div class="product-img">
                         <img
                             src="{{ asset('public/storage/' . $firstImage) }}"
@@ -57,7 +57,7 @@
                             alt="{{ $sp->ten_san_pham }}">
                     </div>
 
-                    {{-- Thông tin sản phẩm --}}
+
                     <div class="product-info">
                         <h3>{{ $sp->ten_san_pham }}</h3>
                         @php

@@ -17,39 +17,39 @@
     <section class="dangnhap">
         <div class="container1" id="container1">
 
-            {{-- FORM ĐĂNG KÝ --}}
+
             <div class="form-container1 register-container1">
                 <form action="{{ route('register') }}" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
                     @csrf
                     <h1>Đăng ký</h1>
 
-                    {{-- Họ và tên --}}
+
                     <div class="form-control">
                         <input type="text" name="name" placeholder="Họ và tên" value="{{ old('name') }}" required />
                     </div>
 
-                    {{-- Email --}}
+
                     <div class="form-control">
                         <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" required />
                     </div>
 
-                    {{-- Username --}}
+
                     <div class="form-control">
                         <input type="text" name="username" placeholder="Tên đăng nhập" value="{{ old('username') }}" required />
                     </div>
 
-                    {{-- Số điện thoại --}}
+
                     <div class="form-control">
                         <input type="text" name="so_dien_thoai" placeholder="Số điện thoại" value="{{ old('so_dien_thoai') }}" required />
                     </div>
 
-                    {{-- Ngày sinh --}}
+
                     <div class="form-control">
                         <input type="date" name="ngay_sinh" value="{{ old('ngay_sinh') }}" required />
                     </div>
 
 
-                    {{-- Mật khẩu --}}
+
                     <div class="form-control">
                         <input type="password" id="MatKhau" name="password" placeholder="Mật khẩu" required>
                         <button class="btn-dk" type="button" id="togglePassword">
@@ -57,7 +57,7 @@
                         </button>
                     </div>
 
-                    {{-- Xác nhận mật khẩu --}}
+
                     <div class="form-control">
                         <input type="password" id="XacNhanMatKhau" name="password_confirmation" placeholder="Xác nhận mật khẩu" required>
                         <button class="btn-dk" type="button" id="togglePasswordConfirm">
@@ -70,7 +70,7 @@
             </div>
 
 
-            {{-- FORM ĐĂNG NHẬP --}}
+
             <div class="form-container1 login-container1">
                 <form action="{{ route('login') }}" method="POST" class="form-lg" novalidate>
                     @csrf
@@ -78,11 +78,11 @@
 
 
 
-                    {{-- Username --}}
+
                     <div class="form-control2">
                         <input type="text" name="username" placeholder="Tên đăng nhập" value="{{ old('username') }}" required />
                     </div>
-                    {{-- Mật khẩu đăng nhập --}}
+
                     <div class="form-control2" style="position:relative;">
                         <input type="password" id="MatKhauLogin" name="password" placeholder="Mật khẩu" required />
                         <button class="btn-dn" type="button" id="togglePasswordLogin">
@@ -113,7 +113,7 @@
                 </form>
             </div>
 
-            {{-- OVERLAY --}}
+
             <div class="overlay-container1">
                 <div class="overlay">
                     <div class="overlay-panel overlay-left">

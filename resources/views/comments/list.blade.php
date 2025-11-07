@@ -1,4 +1,3 @@
-{{-- Bài viết gốc --}}
 <div class="post-box-bv">
     <div class="post-header">
         <img src="{{ $post->user->anh_dai_dien 
@@ -12,7 +11,7 @@
     </div>
     <p class="nd-bv">{{ $post->noi_dung }}</p>
 
-    {{-- Ảnh --}}
+
     @if($post->hinh_anh)
     @php
     $images = $post->hinh_anh ?? [];
@@ -53,7 +52,7 @@
     <button id="nextBtn" class="nav-btn" onclick="nextImage()"><i class="bi bi-caret-right-fill"></i></button>
 </div>
 
-{{-- Danh sách bình luận --}}
+
 @if($comments->count() > 0)
 @foreach($comments as $cmt)
 @include('comments.item', ['cmt' => $cmt])

@@ -7,13 +7,11 @@ html {
     padding: 0;
 }
 
-/* Sidebar dark mode */
 .dark-mode .sidebar-custom {
     background: #18191a;
     color: #e4e6eb;
 }
 
-/* Box trong sidebar */
 .dark-mode .box-invite,
 .dark-mode .box-suggest,
 .dark-mode .box-friends {
@@ -28,7 +26,6 @@ html {
     color: #ffffff;
 }
 
-/* Item trong các box */
 .dark-mode .invite-item,
 .dark-mode .suggest-item,
 .dark-mode .friend-item {
@@ -38,7 +35,6 @@ html {
     border: 1px solid #3e4042;
 }
 
-/* Avatar */
 .dark-mode .avatar-invite,
 .dark-mode .avatar-suggest,
 .dark-mode .friend-item img {
@@ -52,7 +48,6 @@ html {
     border: 1px solid #3e4042;
 }
 
-/* Hover hiệu ứng */
 .dark-mode .invite-item:hover,
 .dark-mode .suggest-item:hover,
 .dark-mode .friend-item:hover {
@@ -61,7 +56,6 @@ html {
     cursor: pointer;
 }
 
-/* Nút trong dark mode */
 .dark-mode .btn-accept {
     background: #2374e1;
     color: #fff;
@@ -89,7 +83,6 @@ html {
     background: #21426d;
 }
 
-/* Link xem thêm */
 .dark-mode .btn-xem-them {
     color: #4599ff;
 }
@@ -104,7 +97,6 @@ html {
     color: #d1d1d1;
 }
 
-/* Box chung */
 .invite-item {
     background: #ffffff;
     border: 1px solid #d0d0d0;
@@ -113,7 +105,6 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* Đẩy avatar - tên - nút ra hai bên */
     margin-bottom: 10px;
     gap: 12px;
     transition: background-color 0.3s ease;
@@ -152,7 +143,6 @@ html {
 .invite-item .btn-accept,
 .invite-item .btn-decline {
     width: 70px;
-    /* 👈 Hai nút luôn bằng nhau */
     border: none;
     padding: 6px 0;
     border-radius: 6px;
@@ -187,7 +177,6 @@ html {
     cursor: pointer;
 }
 
-/* --------- Gợi ý bạn bè --------- */
 .suggest-item {
     display: flex;
     justify-content: space-between;
@@ -239,13 +228,11 @@ html {
     background: #3c5a83;
 }
 
-/* --------- Danh sách bạn bè --------- */
 .box-friends .friends-list {
     list-style: none;
     margin: 0;
     padding: 0;
     max-height: 200px;
-    /* cuộn được */
     overflow-y: auto;
 }
 
@@ -278,7 +265,6 @@ html {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100px;
-    /* 👈 giới hạn để hiện … khi quá dài */
 }
 
 .friend-item:hover {
@@ -287,7 +273,6 @@ html {
     cursor: pointer;
 }
 
-/* --------- Link xem thêm --------- */
 .btn-xem-them {
     display: inline-block;
     margin-top: 8px;
@@ -313,10 +298,8 @@ html {
     transition: transform 0.3s ease;
 }
 
-/* Nút menu 3 gạch */
 .sidebar-toggle {
     display: none;
-    /* Ẩn khi màn hình to */
     position: fixed;
     top: 65px;
     right: 2px;
@@ -331,23 +314,19 @@ html {
 
 }
 
-/* Khi màn hình nhỏ */
 @media (max-width: 1024px) {
     .sidebar-toggle {
         display: block;
-        /* Hiện nút menu */
     }
 
     .sidebar-right {
         transform: translateX(100%);
-        /* Ẩn sidebar */
         width: 260px;
         z-index: 1000;
     }
 
     .sidebar-right.active {
         transform: translateX(0);
-        /* Hiện sidebar khi bấm nút */
     }
 }
 
@@ -386,20 +365,17 @@ html {
 
 }
 
-/* Mobile mode */
 @media (max-width: 1024px) {
 
 
     .sidebar-left {
         transform: translateX(-100%);
-        /* Ẩn sidebar */
         width: 240px;
         z-index: 1000;
     }
 
     .sidebar-left.active {
         transform: translateX(0);
-        /* Hiện khi bấm */
     }
 }
 

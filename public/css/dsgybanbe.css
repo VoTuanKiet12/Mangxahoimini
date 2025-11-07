@@ -1,5 +1,3 @@
-/* 🌤️ Gợi ý bạn bè đầy khung */
-/* 🌙 Dark mode */
 .dark-mode .dsgyfriend-item {
     background: #242526;
     box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
@@ -42,7 +40,6 @@
     color: inherit;
 }
 
-/* 👤 Thông tin bạn bè */
 .dsgyfriend-info {
     display: flex;
     align-items: center;
@@ -69,7 +66,6 @@
     color: #666;
 }
 
-/* ⚙️ Hành động */
 .dsgyfriend-actions {
     flex-shrink: 0;
 }

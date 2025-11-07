@@ -20,7 +20,7 @@
     </div>
 </nav>
 <div class="admin-container">
-    {{-- Sidebar trái --}}
+
     <div class="admin-sidebar">
         <h3>Bảng Điều Khiển</h3>
         <div class="admin-menu">
@@ -32,19 +32,24 @@
                 class="admin-link {{ request()->routeIs('admin.baiviet') ? 'active' : '' }}">
                 <i class="bi bi-book"></i> Quản lý bài viết
             </a>
+            <a href="{{ route('admin.doanhnghiep.list') }}"
+                class="admin-link {{ request()->routeIs('admin.doanhnghiep.list') ? 'active' : '' }}">
+                <i class="bi bi-box2-fill"></i> Quản lý danh sách doanh nghiêp
+            </a>
             <a href="{{ route('admin.doanhnghiep.index') }}"
                 class="admin-link {{ request()->routeIs('admin.doanhnghiep.index') ? 'active' : '' }}">
-                <i class="bi bi-building-fill"></i> Quản lý doanh nghiệp
+                <i class="bi bi-building-fill"></i> Quản lý đăng ký doanh nghiệp
             </a>
             <a href="{{ route('admin.loaisp.danhsach') }}"
                 class="admin-link {{ request()->routeIs('admin.loaisp.danhsach') ? 'active' : '' }}">
                 <i class="bi bi-box2-fill"></i> Quản lý loại sản phẩm
             </a>
 
+            </a>
         </div>
     </div>
 
-    {{-- Khu vực nội dung --}}
+
     <div class="admin-content">
         @hasSection('quanly')
         @yield('quanly')

@@ -45,9 +45,7 @@ class DoanhNghiepController extends Controller
         ]);
 
         // cập nhật quyền người dùng thành doanh nghiệp
-        $user = Auth::user();
-        $user->role = 'doanh_nghiep';
-        $user->save();
+
 
         return redirect()->route('trangchu')->with('success', 'Đăng ký doanh nghiệp thành công! Hãy chờ admin duyệt.');
     }
@@ -62,7 +60,7 @@ class DoanhNghiepController extends Controller
         $choDuyet = DoanhNghiep::where('trang_thai', 'cho_duyet')->get();
         $hoatDong = DoanhNghiep::where('trang_thai', 'hoat_dong')->get();
         $biTuChoi = DoanhNghiep::where('trang_thai', 'tu_choi')->get();
-        $tongUser = User::count();
+        $tongUser = User::where('role', 'user')->count();
         $tongBaiViet = BaiViet::count();
         $tongDoanhNghiep = DoanhNghiep::count();
 

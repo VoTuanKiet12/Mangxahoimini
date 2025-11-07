@@ -7,7 +7,7 @@
 
 <div class="group-detail">
     <div class="group-container">
-        {{-- ===== CỘT TRÁI ===== --}}
+
         <div class="group-left">
             <div class="group-info">
                 <div class="group-header">
@@ -31,7 +31,7 @@
                 </form>
                 @endif
 
-                {{-- ===== PHẦN ĐÀM THOẠI ===== --}}
+
                 <div class="voice-chat-section">
                     <h3>Đàm thoại nhóm</h3>
                     <div id="voiceStatus" class="voice-status">Chưa tham gia</div>
@@ -51,7 +51,7 @@
                 </div>
 
 
-                {{-- Nút chuyển giữa các phần --}}
+
                 <div class="group-switch">
 
 
@@ -59,20 +59,20 @@
             </div>
         </div>
 
-        {{-- ===== CỘT GIỮA (TIN NHẮN) ===== --}}
+
         <div class="group-center">
             <div id="videoSection" class="video-section" hidden>
                 <h4>Video nhóm</h4>
                 <div id="videoGrid" class="video-grid"></div>
             </div>
 
-            {{-- ===== PHẦN CHAT ===== --}}
+
             <meta name="csrf-token" content="{{ csrf_token() }}">
             <div class="chat-container">
                 <h3>Tin nhắn nhóm</h3>
                 <div id="messages" class="chat-box"></div>
 
-                {{-- Form gửi tin nhắn --}}
+
                 <form id="messageForm" enctype="multipart/form-data" method="POST" action="javascript:void(0);">
                     <div id="imagePreviewContainer">
                         <img id="previewImage" src="" alt="Preview">
@@ -92,7 +92,7 @@
             <div id="chatBox" data-room-id="{{ $nhom->id }}"></div>
         </div>
 
-        {{-- ===== CỘT PHẢI ===== --}}
+
         <div class="group-right">
             <div class="member-section">
                 <div class="group-header1">
@@ -132,7 +132,7 @@
     </div>
 </div>
 
-{{-- ===== SCRIPT XỬ LÝ CHAT ===== --}}
+
 <script>
     const roomId = document.getElementById("chatBox").dataset.roomId;
     const getMessagesUrl = "{{ route('nhom.getMessages', ':id') }}".replace(':id', roomId);
@@ -218,7 +218,7 @@
     setInterval(loadMessages, 10000);
 </script>
 
-{{-- ===== SCRIPT XEM TRƯỚC ẢNH ===== --}}
+
 <script>
     const imageInput = document.getElementById('imageInput');
     const previewImage = document.getElementById('previewImage');
@@ -245,7 +245,7 @@
     });
 </script>
 
-{{-- ===== SCRIPT VOICE/VIDEO ===== --}}
+
 
 
 <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>

@@ -24,7 +24,7 @@ $coThongBaoMoi = $thongBaos->where('da_doc', 0)->count() > 0;
                 <i class="bi bi-search"></i>
             </a>
 
-            {{-- Ô tìm kiếm (ẩn/hiện khi click) --}}
+
             <form action="{{ route('timkiem') }}" method="GET">
                 <input type="text" id="searchInput" name="q" class="search-input" placeholder="Tìm kiếm người dùng...">
             </form>
@@ -72,7 +72,7 @@ $coThongBaoMoi = $thongBaos->where('da_doc', 0)->count() > 0;
 
                 @forelse($thongBaos as $tb)
                 @if($tb->link)
-                {{-- Nếu có link, bấm vào sẽ đi tới bài viết/trang liên quan --}}
+
                 <a href="{{ $tb->link }}"
                     class="noti-item {{ $tb->da_doc ? '' : 'chua-doc' }}"
                     onclick="danhDauDaDoc({{ $tb->id }})">
@@ -80,7 +80,7 @@ $coThongBaoMoi = $thongBaos->where('da_doc', 0)->count() > 0;
                     <small>{{ $tb->created_at->diffForHumans() }}</small>
                 </a>
                 @else
-                {{-- Nếu không có link, chỉ là thông báo văn bản --}}
+
                 <div class="noti-item {{ $tb->da_doc ? '' : 'chua-doc' }}"
                     onclick="danhDauDaDoc({{ $tb->id }})">
                     <p>{{ $tb->noi_dung }}</p>
@@ -99,7 +99,7 @@ $coThongBaoMoi = $thongBaos->where('da_doc', 0)->count() > 0;
         ->get();
         $tongSoLuongGioHang = $gioHangMini->sum('so_luong');
         @endphp
-        {{-- === Giỏ hàng (mini cart) === --}}
+
         <div class="cart-container">
             <div class="cart-icon" id="cartIcon" onclick="toggleCart()">
                 <i class="bi bi-cart3"></i>
@@ -142,7 +142,7 @@ $coThongBaoMoi = $thongBaos->where('da_doc', 0)->count() > 0;
                         <small class="item-total">{{ number_format($item->sanPham->gia * $item->so_luong, 0, ',', '.') }}₫</small>
                     </div>
 
-                    {{-- Nút xóa --}}
+
                     <form action="{{ route('giohang.xoa', $item->id) }}"
                         method="POST"
                         class="cart-delete-form"

@@ -122,7 +122,7 @@ class BaiVietController extends Controller
         $baiViet = BaiViet::with('user')->latest()->paginate(5);
 
         $tongBaiViet = BaiViet::count();
-        $tongUser = User::count();
+        $tongUser = User::where('role', 'user')->count();
         $tongDoanhNghiep = DoanhNghiep::count();
 
         return view('admin.baiviet', compact('baiViet', 'tongBaiViet', 'tongUser', 'tongDoanhNghiep'));

@@ -7,10 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentIndex = 0;
     let imageUrls = [];
 
-    // Lưu danh sách ảnh
     imageItems.forEach(img => imageUrls.push(img.src));
 
-    // Khi click vào ảnh => mở overlay
     imageItems.forEach((img, index) => {
         img.addEventListener('click', () => {
             currentIndex = index;
@@ -19,19 +17,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Nút Prev
     window.prevImage = function () {
         currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
         overlayImg.src = imageUrls[currentIndex];
     };
 
-    // Nút Next
     window.nextImage = function () {
         currentIndex = (currentIndex + 1) % imageUrls.length;
         overlayImg.src = imageUrls[currentIndex];
     };
 
-    // Click ra ngoài ảnh => đóng overlay
     overlay.addEventListener('click', function (e) {
         if (e.target === overlay) {
             overlay.style.display = 'none';

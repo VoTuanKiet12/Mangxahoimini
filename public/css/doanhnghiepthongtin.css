@@ -17,7 +17,6 @@
      flex-direction: column;
      justify-content: space-between;
      height: 350px;
-     /* ✅ Chiều cao cố định */
  }
 
  .info-box:hover {
@@ -100,13 +99,11 @@
      border: 2px solid #eee;
  }
 
- /* ✅ Box chiếm 2 cột có chiều cao riêng */
  .info-box.full {
      grid-column: span 2;
      height: 250px;
  }
 
- /* Responsive */
  @media (max-width: 900px) {
      .info-grid {
          grid-template-columns: 1fr;
@@ -114,7 +111,6 @@
 
      .info-box {
          height: auto;
-         /* Trên điện thoại cho co giãn */
      }
 
      .info-box.full {

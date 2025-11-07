@@ -46,7 +46,6 @@ hr {
     margin: 10px 0 20px 0;
 }
 
-/* === Thông báo === */
 .alert {
     padding: 10px 15px;
     border-radius: 8px;
@@ -66,7 +65,6 @@ hr {
     border-left: 5px solid #e53935;
 }
 
-/* === Bảng === */
 .member-table {
     width: 100%;
     border-collapse: collapse;
@@ -95,7 +93,6 @@ hr {
     background-color: #f7f9fc;
 }
 
-/* === Avatar === */
 .avatar {
     width: 45px;
     height: 45px;
@@ -104,7 +101,6 @@ hr {
     border: 2px solid #3498db33;
 }
 
-/* === Vai trò === */
 .badge {
     display: inline-block;
     padding: 6px 10px;
@@ -127,7 +123,6 @@ hr {
     background-color: #acd156;
 }
 
-/* === Form nội dòng === */
 .inline-form {
     display: inline-flex;
     align-items: center;
@@ -135,7 +130,6 @@ hr {
     justify-content: center;
 }
 
-/* === Nút === */
 .btn {
     border: none;
     padding: 6px 12px;
@@ -164,7 +158,6 @@ hr {
     background-color: #c0392b;
 }
 
-/* === Select vai trò === */
 .role-select {
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -179,7 +172,6 @@ hr {
     box-shadow: 0 0 3px #3498db66;
 }
 
-/* === Responsive === */
 @media (max-width: 700px) {
 
     .member-table th,

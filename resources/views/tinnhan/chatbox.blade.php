@@ -1,4 +1,3 @@
-{{-- Hộp chat --}}
 <div id="chatBox" class="chat-box hidden">
     <div class="chat-header">
         <div class="chat-user">
@@ -11,29 +10,29 @@
         </div>
     </div>
 
-    {{-- Vùng hiển thị tin nhắn --}}
+
     <div class="chat-messages" id="chatMessages"></div>
 
-    {{-- Form gửi tin nhắn --}}
+
     <form id="chatForm" enctype="multipart/form-data">
         @csrf
         <input type="hidden" id="chatFriendId">
 
 
-        {{-- Ô nhập nội dung --}}
+
         <input type="text" id="chatInput" placeholder="Nhắn tin...">
 
-        {{-- Nút gửi --}}
+
         <button type="submit" class="sendMessage" title="Gửi tin nhắn"><i class="bi bi-arrow-right-circle-fill"></i></button>
     </form>
 
-    {{-- Preview ảnh trước khi gửi --}}
+
     <div id="imagePreview" class="chat-preview hidden">
         <img id="previewImg" src="">
         <button id="cancelPreview" type="button" title="Hủy">✖</button>
     </div>
 
-    {{-- Overlay tùy chọn --}}
+
     <div id="chatOverlay" class="chat-overlay">
         <h3>Tùy chỉnh chat</h3>
 

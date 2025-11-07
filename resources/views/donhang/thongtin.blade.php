@@ -5,13 +5,13 @@
 @section('full')
 <div class="checkout-container">
 
-    {{-- ====== CỘT TRÁI: THÔNG TIN GIAO HÀNG ====== --}}
+
     <div class="checkout-left">
 
 
         <h1><span class="so">1</span> Thông tin giao hàng</h1>
 
-        {{-- Hiển thị thông báo lỗi --}}
+
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul style="margin: 0;">
@@ -72,7 +72,7 @@
         </form>
     </div>
 
-    {{-- ====== CỘT PHẢI: TÓM TẮT ĐƠN HÀNG ====== --}}
+
     <div class="order-summary">
         <h3>Tóm tắt đơn hàng</h3>
         <div class="summary-images">

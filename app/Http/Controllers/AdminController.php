@@ -13,11 +13,11 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $tongUser = User::count();
+        $tongUser = User::where('role', 'user')->count();
         $tongBaiViet = BaiViet::count();
         $tongDoanhNghiep = DoanhNghiep::count();
 
-        $users = User::paginate(10);
+        $users = User::where('role', 'user')->paginate(10);
 
         return view('admin.nguoidung', compact('tongUser', 'tongBaiViet', 'tongDoanhNghiep', 'users'));
     }
@@ -45,6 +45,8 @@ class AdminController extends Controller
 
         return view('admin.doanhnghiep.index', compact('doanhNghiep', 'tongDoanhNghiep', 'tongUser', 'tongBaiViet'));
     }
+
+    // ✅ Kích hoạt / vô hiệu người dùng
     public function toggleUser($id)
     {
         $user = User::findOrFail($id);
@@ -59,6 +61,8 @@ class AdminController extends Controller
 
         return back()->with('success', 'Cập nhật trạng thái tài khoản thành công!');
     }
+
+    // ✅ Cập nhật vai trò người dùng
     public function updateRole(Request $request, $id)
     {
         $user = User::findOrFail($id);
@@ -68,13 +72,24 @@ class AdminController extends Controller
             return redirect()->back()->with('error', 'Bạn không thể thay đổi vai trò của chính mình.');
         }
 
+        // ✅ Cho phép 3 loại role
         $request->validate([
-            'role' => 'required|in:admin,user'
+            'role' => 'required|in:admin,user,doanh_nghiep'
         ]);
 
         $user->role = $request->role;
         $user->save();
 
         return redirect()->back()->with('success', 'Cập nhật vai trò thành công!');
+    }
+    public function nguoiDungDoanhNghiep()
+    {
+        $doanhNghiep = User::where('role', 'doanh_nghiep')->paginate(10);
+
+        $tongUser = User::where('role', 'user')->count();
+        $tongBaiViet = BaiViet::count();
+        $tongDoanhNghiep = User::where('role', 'doanh_nghiep')->count();
+
+        return view('admin.doanhnghiep', compact('doanhNghiep', 'tongUser', 'tongBaiViet', 'tongDoanhNghiep'));
     }
 }

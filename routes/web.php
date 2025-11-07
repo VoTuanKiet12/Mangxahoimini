@@ -3,8 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 // =======================
-// CONTROLLERS
-// =======================
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\AdminController;
@@ -32,9 +30,7 @@ use App\Http\Controllers\ThongKeController;
 use App\Http\Controllers\KhuyenMaiController;
 use App\Http\Controllers\DoanhNghiepBaiVietController;
 
-// =====================================================================
-//  AUTH (Đăng nhập, Đăng ký, Đăng xuất)
-// =====================================================================
+
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
@@ -43,23 +39,19 @@ Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->na
 Route::post('/register', [RegisterController::class, 'register']);
 
 
-// =====================================================================
-//  ADMIN
-// =====================================================================
+
 Route::middleware(['auth', 'can:access-admin'])->prefix('admin')->group(function () {
 
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
     Route::get('/nguoidung', [AdminController::class, 'index'])->name('admin.nguoidung');
-    // Người dùng
     Route::patch('/user/{id}/toggle', [AdminController::class, 'toggleUser'])->name('admin.toggleUser');
     Route::patch('/admin/user/{id}/role', [AdminController::class, 'updateRole'])->name('admin.updateRole');
 
-    // Doanh nghiệp
     Route::get('/doanh-nghiep', [DoanhNghiepController::class, 'index'])->name('admin.doanhnghiep.index');
     Route::patch('/doanh-nghiep/{id}/duyet', [DoanhNghiepController::class, 'approve'])->name('admin.doanhnghiep.duyet');
     Route::patch('/doanh-nghiep/{id}/tu-choi', [DoanhNghiepController::class, 'reject'])->name('admin.doanhnghiep.tuchoi');
-
-    // Loại sản phẩm
+    Route::get('/admin/doanhnghiep', [AdminController::class, 'nguoiDungDoanhNghiep'])
+        ->name('admin.doanhnghiep.list');
     Route::get('/loai-san-pham', [LoaiSanPhamController::class, 'index'])->name('admin.loaisp.danhsach');
     Route::post('/loai-san-pham/them', [LoaiSanPhamController::class, 'store'])->name('admin.loaisp.them');
     Route::patch('/loai-san-pham/sua/{id}', [LoaiSanPhamController::class, 'update'])->name('admin.loaisp.sua');
@@ -70,15 +62,11 @@ Route::middleware(['auth', 'can:access-admin'])->prefix('admin')->group(function
 });
 
 
-// =====================================================================
-//  CÁC ROUTE YÊU CẦU ĐĂNG NHẬP
-// =====================================================================
+
 Route::middleware('auth')->group(function () {
 
-    // ======================= TRANG CHỦ =======================
     Route::get('/trangchu', [TrangChuController::class, 'index'])->name('trangchu');
 
-    // ======================= NGƯỜI DÙNG =======================
     Route::get('/user/{id}', [UserController::class, 'show'])->name('user.show');
     Route::get('/profile', [UserController::class, 'showProfile'])->name('user.profile');
     Route::post('/profile', [UserController::class, 'updateProfile'])->name('user.profile.update');
@@ -87,7 +75,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/user/update-avatar', [UserController::class, 'updateAvatar'])->name('user.update.avatar');
     Route::post('/user/update-cover', [UserController::class, 'updateCover'])->name('user.update.cover');
 
-    // ======================= BÀI VIẾT =======================
     Route::post('/baiviet/store', [BaiVietController::class, 'store'])->name('baiviet.store');
     Route::get('/baiviet/{id}', [BaiVietController::class, 'show'])->name('baiviet.show');
     Route::delete('/baiviet/{id}', [BaiVietController::class, 'destroy'])->name('baiviet.destroy');
@@ -98,14 +85,12 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/doanhnghiep/baiviet/tao', [App\Http\Controllers\DoanhNghiepBaiVietController::class, 'store'])
         ->name('doanhnghiep.baiviet.store');
-    // ======================= BÌNH LUẬN & LƯỢT THÍCH =======================
     Route::post('/binhluan', [BinhLuanController::class, 'store'])->name('binhluan.store');
     Route::get('/binhluan/{id}', [BinhLuanController::class, 'index'])->name('binhluan.index');
     Route::delete('/binhluan/{id}', [BinhLuanController::class, 'destroy'])->name('binhluan.destroy');
     Route::post('/baiviet/{id}/like', [LuotThichController::class, 'store'])->name('like');
     Route::post('/baiviet/{id}/unlike', [LuotThichController::class, 'destroy'])->name('unlike');
 
-    // ======================= KẾT BẠN =======================
     Route::get('/ban-be', [KetBanController::class, 'tatCaBanBe'])->name('ketban.ban_be');
     Route::get('/loi-moi-ket-ban', [KetBanController::class, 'tatCaLoiMoi'])->name('ketban.loimoi');
     Route::get('/goi-y-ban-be', [KetBanController::class, 'goiYBanBe'])->name('ketban.goi_y');
@@ -114,25 +99,21 @@ Route::middleware('auth')->group(function () {
     Route::post('/ket-ban/decline/{id}', [KetBanController::class, 'decline'])->name('ketban.decline');
     Route::post('/ketban/cancel/{id}', [KetBanController::class, 'cancel'])->name('ketban.cancel');
 
-    // ======================= STORY =======================
     Route::post('/story', [StoryController::class, 'store'])->name('story.store');
     Route::get('/story/clean', [StoryController::class, 'cleanExpired'])->name('story.clean');
     Route::delete('/story/{id}', [StoryController::class, 'destroy'])->name('story.destroy');
 
-    // ======================= TIN NHẮN =======================
     Route::get('/tin-nhan/{id}', [TinNhanController::class, 'show']);
     Route::post('/tin-nhan/gui', [TinNhanController::class, 'send']);
     Route::get('/kiemtra-tinnhan-moi', [TinNhanController::class, 'kiemTraMoi']);
     Route::get('/danhdau-dadoc/{friend_id}', [TinNhanController::class, 'danhDauDaDoc']);
     Route::delete('/tin-nhan/xoa/{id}', [TinNhanController::class, 'xoaTinNhan'])->name('tin-nhan.xoa');
 
-    // Mẫu tin nhắn
     Route::get('/lay-mau-chat/{friendId}', [MauTinNhanController::class, 'layMau']);
     Route::post('/luu-mau-chat', [MauTinNhanController::class, 'luuMau']);
     Route::post('/luu-anh-nen-chat', [MauTinNhanController::class, 'luuAnhNen']);
     Route::post('/xoa-anh-nen-chat', [MauTinNhanController::class, 'xoaAnhNen']);
 
-    // ======================= NHÓM =======================
     Route::prefix('nhom')->group(function () {
         Route::get('/tao', [NhomController::class, 'create'])->name('nhom.create');
         Route::post('/tao', [NhomController::class, 'store'])->name('nhom.store');
@@ -152,7 +133,6 @@ Route::middleware('auth')->group(function () {
         Route::post('/{id}/tu-choi', [NhomController::class, 'rejectInvite'])->name('nhom.reject');
         Route::get('/{id}/danh-sach-moi', [NhomController::class, 'getAvailableFriends']);
 
-        // Tin nhắn nhóm
         Route::get('/{id}/tin-nhan', [NhomController::class, 'messages'])->name('nhom.messages');
         Route::get('/{id}/messages', [NhomController::class, 'getMessages'])->name('nhom.getMessages');
         Route::post('/{id}/send-message', [NhomController::class, 'sendMessage'])->name('nhom.sendMessage');
@@ -161,7 +141,6 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/voicechat', fn() => view('voicechat.index'));
 
-    // ======================= DOANH NGHIỆP =======================
     Route::get('/dang-ky-doanh-nghiep', [DoanhNghiepController::class, 'create'])->name('doanhnghiep.create');
     Route::post('/dang-ky-doanh-nghiep', [DoanhNghiepController::class, 'store'])->name('doanhnghiep.store');
 
@@ -170,11 +149,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/doanhnghiep/{id}/edit', [DoanhNghiepController::class, 'edit'])->name('doanhnghiep.edit');
     Route::put('/doanhnghiep/{id}', [DoanhNghiepController::class, 'update'])->name('doanhnghiep.update');
 
-    // Thống kê
     Route::get('/doanhnghiep/thongke', [ThongKeController::class, 'index'])->name('doanhnghiep.thongke');
     Route::get('/doanhnghiep/sanpham/top-ban-chay', [ThongKeController::class, 'topBanChay'])->name('doanhnghiep.sanpham.top_ban_chay');
 
-    // Sản phẩm
     Route::prefix('doanhnghiep')->group(function () {
         Route::get('/dang-san-pham', [SanPhamController::class, 'create'])->name('doanhnghiep.dangsanpham');
         Route::post('/dang-san-pham', [SanPhamController::class, 'store'])->name('sanpham.store');
@@ -187,17 +164,14 @@ Route::middleware('auth')->group(function () {
         Route::get('/sanpham/xuat', [SanPhamController::class, 'getXuat'])->name('doanhnghiep.sanpham.xuat');
     });
 
-    // Đơn hàng doanh nghiệp
     Route::get('/don-hang', [DonHangDoanhNghiepController::class, 'index'])->name('doanhnghiep.donhang.index');
     Route::get('/don-hang/{id}', [DonHangDoanhNghiepController::class, 'show'])->name('doanhnghiep.donhang.show');
     Route::put('/don-hang/{id}', [DonHangDoanhNghiepController::class, 'updateTrangThai'])->name('doanhnghiep.donhang.update');
-    // routes/web.php
     Route::get('/donhang/thanhtoan-giohang', [DonHangController::class, 'hienThiFormThanhToan'])
         ->name('donhang.thanhtoanGioHang');
     Route::post('/donhang/dat-gio-hang', [DonHangController::class, 'datHangTuGioHang'])
         ->name('donhang.datGioHang');
 
-    // ======================= KHÁCH HÀNG MUA HÀNG =======================
     Route::get('/san-pham', [SanPhamController::class, 'index'])->name('sanpham.index');
     Route::get('/sanpham/{id}', [SanPhamController::class, 'show'])->name('sanpham.chitiet');
     Route::post('/sanpham/nhap', [SanPhamController::class, 'postNhap'])->name('sanpham.nhap');
@@ -218,17 +192,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/donhang/da-mua', [DonHangController::class, 'daMua'])->name('donhang.daMua');
     Route::delete('/donhang/{id}/xoa', [DonHangController::class, 'destroy'])->name('donhang.xoa');
 
-    // ======================= ĐÁNH GIÁ & THÔNG BÁO =======================
     Route::post('/thong-bao/danh-dau-da-doc', [ThongBaoController::class, 'danhDauDaDoc'])->name('thongbao.danhdau');
     Route::post('/danh-gia', [DanhGiaSanPhamController::class, 'store'])->name('danhgia.store');
     Route::delete('/danhgia/{id}', [DanhGiaSanPhamController::class, 'destroy'])->name('danhgia.destroy');
     Route::post('/danhgia/{id}/reply', [DanhGiaSanPhamController::class, 'reply'])
         ->name('danhgia.reply');
 
-    // ======================= KHUYẾN MÃI =======================
     Route::resource('khuyenmai', KhuyenMaiController::class);
 
-    // ======================= KHÁC =======================
     Route::get('/sidebar', [SidebarController::class, 'index'])->name('sidebar');
     Route::get('/tim-kiem', [TimkiemController::class, 'index'])->name('timkiem');
 });

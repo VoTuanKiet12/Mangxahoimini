@@ -8,9 +8,9 @@
 @section('content')
 <div class="feed">
 
-    {{-- Nếu đã đăng nhập --}}
+
     @auth
-    {{-- Form đăng bài --}}
+
     <div class="post-box1">
         <form method="POST" action="{{ route('baiviet.store') }}" enctype="multipart/form-data">
             @csrf
@@ -38,7 +38,7 @@
 
 
 
-    {{-- Bài viết --}}
+
     @foreach($baiviets as $post)
     <div class="post-box" data-post-id="{{ $post->id }}">
 
@@ -58,7 +58,7 @@
 
             <span class="ngay-tao">{{ \Carbon\Carbon::parse($post->ngay_dang)->format('d/m/Y') }}</span>
 
-            {{-- Xóa bài viết nếu là chủ bài --}}
+
             @if(Auth::id() === $post->user->id)
             <div class="xoa_bd">
                 <form method="POST" action="{{ route('baiviet.destroy', $post->id) }}"
@@ -80,7 +80,7 @@
         </p>
         @endif
 
-        {{-- Ảnh --}}
+
         @if($post->hinh_anh)
         @php
         $images = $post->hinh_anh ?? [];
@@ -108,7 +108,7 @@
 
 
 
-    {{-- Video --}}
+
     @if($post->video)
     <div class="video-wrapper">
         <video class="auto-play-video" controls muted>
@@ -116,7 +116,7 @@
         </video>
     </div>
     @endif
-    {{-- Link sản phẩm nếu có --}}
+
 
 
 
@@ -129,7 +129,7 @@
 
 @endauth
 
-{{-- Nếu chưa đăng nhập --}}
+
 @guest
 <div class="post-box">Vui lòng đăng nhập để xem bảng tin.</div>
 @endguest
@@ -153,7 +153,7 @@
                 <p>Đang tải bình luận...</p>
             </div>
         </div>
-        {{-- Form nhập bình luận --}}
+
         @auth
         <form id="commentForm" class="binh_luan" method="POST" enctype="multipart/form-data">
             @csrf

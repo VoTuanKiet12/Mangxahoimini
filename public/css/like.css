@@ -10,7 +10,6 @@
 
 
 
-/* Hộp chọn cảm xúc */
 .reaction-options {
     position: absolute;
     bottom: 100%;
@@ -32,7 +31,6 @@
 
 }
 
-/* Khi hover vào .reaction-box → hiển thị */
 .reaction-box:hover .reaction-options,
 .reaction-box.active .reaction-options {
     opacity: 1;
@@ -41,7 +39,6 @@
     transform: translateX(-50%) translateY(0);
 }
 
-/* Phần tóm tắt cảm xúc */
 .reaction-summary {
     margin-top: 6px;
     display: flex;
@@ -61,7 +58,6 @@
     font-weight: 500;
 }
 
-/* Icon trong hộp cảm xúc */
 .reaction-btn {
     border: none;
     background: transparent !important;
@@ -72,7 +68,6 @@
 }
 
 
-/* Nút Like chính */
 .like-btn {
     font-size: 16px;
     font-weight: 600;
@@ -93,7 +88,6 @@
 
 .like-btn span {
     font-size: 22px;
-    /* icon trong nút Like */
     line-height: 1;
 }
 

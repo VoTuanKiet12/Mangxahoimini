@@ -34,7 +34,6 @@ nav.navbar {
 }
 
 
-/* Logo bên trái */
 
 .dark-mode .nav-left .navbar-logo {
     color: #ffffff;
@@ -116,7 +115,6 @@ nav.navbar {
     color: #0084ff;
 }
 
-/* Thanh tìm kiếm ẩn mặc định */
 .search-input {
     width: 0;
     opacity: 0;
@@ -130,18 +128,15 @@ nav.navbar {
     transition: all 0.3s ease;
 }
 
-/* Khi active thì mở rộng thanh tìm kiếm */
 .search-input.active {
     width: 180px;
     opacity: 1;
 }
 
-/* === Các icon chính giữa === */
 .nav-center {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    /* căn giữa tuyệt đối */
     display: flex;
     gap: 25px;
 }
@@ -166,7 +161,6 @@ nav.navbar {
 }
 
 
-/* === Khu vực người dùng bên phải === */
 .navbar-user {
     position: relative;
     display: flex;
@@ -174,7 +168,6 @@ nav.navbar {
     gap: 10px;
 }
 
-/* === Ảnh đại diện === */
 .avatar1 {
     width: 40px;
     height: 40px;
@@ -188,7 +181,6 @@ nav.navbar {
     border: 2px solid #afff2e;
 }
 
-/* === Dropdown menu === */
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -228,7 +220,6 @@ nav.navbar {
     background-color: #eaeaea;
 }
 
-/* === Liên kết đăng nhập nếu chưa đăng nhập === */
 .login-link {
     text-decoration: none;
     color: #1877f2;
@@ -407,7 +398,6 @@ nav.navbar {
     color: #fff;
 }
 
-/* Khung giỏ hàng bật ra */
 .cart-box {
     position: fixed;
     right: 1px;
@@ -583,7 +573,6 @@ nav.navbar {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 9;
-    /* thấp hơn cart-box một chút */
     display: none;
     transition: opacity 0.3s ease;
 }

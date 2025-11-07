@@ -6,7 +6,7 @@
 <div class="search-container-page">
     <h3 class="page-title"> Tìm kiếm người dùng</h3>
 
-    {{-- Kết quả --}}
+
     @if(!empty($keyword))
     @if($users->isEmpty())
     <p class="no-result">Không tìm thấy người dùng nào phù hợp với "{{ $keyword }}".</p>
@@ -25,7 +25,7 @@
                 </div>
             </a>
 
-            {{-- Nút tùy theo trạng thái bạn bè --}}
+
             @if(is_null($user->friend_status))
             <form method="POST" action="{{ route('ketban.send', $user->id) }}">
                 @csrf

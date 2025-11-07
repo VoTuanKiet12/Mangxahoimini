@@ -109,7 +109,6 @@
     color: #777;
 }
 
-/* ===== Nút xem và mời ===== */
 .group-btn {
     display: flex;
     justify-content: center;
@@ -154,7 +153,6 @@
 
 
 
-/* ===== Overlay mời bạn ===== */
 .invite-overlaynhom {
     position: fixed;
     top: 0;
@@ -310,7 +308,6 @@
     background: #d6d6d6;
 }
 
-/* --- Overlay kiểu popup --- */
 .overlay-nhom {
     position: fixed;
     top: 0;

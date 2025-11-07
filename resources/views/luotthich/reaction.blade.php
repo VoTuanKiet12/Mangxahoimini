@@ -39,7 +39,7 @@ arsort($demCamXuc);
 $top3CamXuc = array_slice($demCamXuc, 0, 3, true);
 @endphp
 
-{{-- ==================== HIỂN THỊ CẢM XÚC ==================== --}}
+
 @if ($tongCamXuc >= 0)
 <div class="reaction-summary">
     @foreach ($top3CamXuc as $loai => $count)
@@ -53,7 +53,7 @@ $top3CamXuc = array_slice($demCamXuc, 0, 3, true);
 
 <div class="post-actions">
     <div class="reaction-box">
-        {{-- Nút chính hiển thị cảm xúc của tôi --}}
+
         <button type="button" class="like-btn">
             @if ($camXucCuaToi)
             {!! $dsCamXuc[$camXucCuaToi]['icon'] !!} {{ $dsCamXuc[$camXucCuaToi]['ten'] }}
@@ -62,7 +62,7 @@ $top3CamXuc = array_slice($demCamXuc, 0, 3, true);
             @endif
         </button>
 
-        {{-- Hộp chọn cảm xúc --}}
+
         <div class="reaction-options">
             @foreach ($dsCamXuc as $loai => $data)
             <form method="POST" action="{{ route('like', $post->id) }}" class="reaction-form ajax-reaction">

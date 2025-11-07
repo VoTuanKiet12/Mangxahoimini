@@ -7,7 +7,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* ===== DARK MODE ===== */
 .dark-mode .admin-content {
     background: #3b3b3b !important;
     color: #ffffff;
@@ -39,7 +38,6 @@ body {
     background-color: #666666;
 }
 
-/* ===== CONTAINER ===== */
 .admin-container {
     display: flex;
     width: 100%;
@@ -48,7 +46,6 @@ body {
     overflow: hidden;
 }
 
-/* ===== SIDEBAR ===== */
 .admin-sidebar {
     width: 280px;
     background-color: #ffffff;
@@ -117,7 +114,6 @@ select.form-select-sm:hover {
     border-color: #007bff;
 }
 
-/* ===== CONTENT ===== */
 .admin-content {
     flex: 1;
     padding: 40px;
@@ -127,7 +123,6 @@ select.form-select-sm:hover {
     box-sizing: border-box;
 }
 
-/* ===== 🔹 NAVBAR CHUNG ===== */
 .navbar {
     width: 100%;
     background: #fff;
@@ -141,7 +136,6 @@ select.form-select-sm:hover {
     z-index: 1000;
 }
 
-/* Logo trái */
 .navbar-logo {
     font-weight: 700;
     font-size: 20px;
@@ -154,14 +148,12 @@ select.form-select-sm:hover {
     color: #0056b3;
 }
 
-/* Khu giữa (dành cho sau này nếu muốn thêm tìm kiếm hoặc tiêu đề) */
 .nav-center {
     flex: 1;
     text-align: center;
     font-size: 24px;
 }
 
-/* Khu bên phải (avatar, dropdown) */
 .navbar-user {
     display: flex;
     align-items: center;
@@ -169,7 +161,6 @@ select.form-select-sm:hover {
     margin-right: 50px;
 }
 
-/* Avatar tròn */
 .avatar1 {
     width: 42px;
     height: 42px;
@@ -184,40 +175,31 @@ select.form-select-sm:hover {
     transform: scale(1.05);
 }
 
-/* ===== 🔹 DROPDOWN MENU ===== */
 
-/* Nút đăng xuất */
 .logout-btn {
     width: 40px;
     height: 40px;
     border: none;
     border-radius: 50%;
     background-color: #f0f0f0;
-    /* nền đỏ nhạt cảnh báo */
     color: #ff5454 !important;
-    /* chữ đỏ đậm */
     font-weight: 600;
     cursor: pointer;
     text-align: center;
     line-height: 40px;
-    /* canh giữa chữ/icon */
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logout-btn:hover {
     background-color: #dfdfdf;
-    /* đỏ đậm hơn khi hover */
     color: #b13737 !important;
-    /* đổi sang trắng */
     transform: scale(1.08);
-    /* phóng nhẹ */
     box-shadow: 0 4px 10px rgba(200, 35, 51, 0.3);
 }
 
 
 
-/* Hiệu ứng mờ xuất hiện dropdown */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -230,7 +212,6 @@ select.form-select-sm:hover {
     }
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .admin-container {
         flex-direction: column;

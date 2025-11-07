@@ -163,10 +163,8 @@ html.dark-mode {
 
 .right-group {
     margin-left: auto;
-    /* đẩy nhóm này sát phải */
     display: flex;
     gap: 15px;
-    /* khoảng cách giữa bình luận và chia sẻ */
 }
 
 .like-reaction {
@@ -249,7 +247,6 @@ html.dark-mode {
     height: 80%;
     max-height: 80%;
     padding-bottom: 70px;
-    /* Để không bị che bình luận khi cuộn */
 }
 
 .comment-item {

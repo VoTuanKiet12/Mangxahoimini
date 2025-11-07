@@ -40,13 +40,11 @@ html.dark-mode {
 .main-wrapper {
     display: flex;
     flex-wrap: wrap;
-    /* vẫn hỗ trợ responsive nếu cần */
     gap: 30px;
     padding: 10px;
     align-items: flex-start;
 }
 
-/* Container chính bên trái */
 .container {
     width: 300px;
     padding: 20px;
@@ -66,7 +64,6 @@ html.dark-mode {
 
 }
 
-/* Sidebar bên phải */
 
 button {
     background-color: #445d77;
@@ -188,7 +185,6 @@ button i {
     line-height: 1.5;
 }
 
-/* Video chia sẻ màn hình */
 .sidebar-right h3,
 .sidebar-right h4 {
     margin-top: 10px;
@@ -261,7 +257,6 @@ button i {
     border: 1px dashed rgb(202, 245, 72);
 }
 
-/* Vùng chứa các màn hình được chia sẻ */
 #remoteScreens {
     display: flex;
     flex-wrap: wrap;
@@ -269,7 +264,6 @@ button i {
     margin-top: 10px;
 }
 
-/* Video của người khác */
 #remoteScreens video {
     width: 100%;
     height: 500px;
@@ -283,10 +277,8 @@ button i {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* hoặc contain nếu muốn giữ trọn khung hình và chấp nhận viền đen */
 }
 
 .volume-slider {
     accent-color: #7477a0;
-    /* màu bạn thích – ví dụ xanh dương DodgerBlue */
 }

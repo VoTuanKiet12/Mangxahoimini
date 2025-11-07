@@ -29,7 +29,7 @@
     </div>
     @endif
 
-    {{-- 🔹 DANH SÁCH NHÓM --}}
+
     @if ($dsNhom->isEmpty())
     <div class="empty-box">
         <i class="bi bi-people-fill"></i>
@@ -88,7 +88,7 @@
 </div>
 @endsection
 
-{{-- 🔹 POPUP MỜI BẠN --}}
+
 <div id="inviteOverlaynhom" class="invite-overlaynhom">
     <div class="invite-boxnhom">
         <h4>Mời bạn vào nhóm</h4>

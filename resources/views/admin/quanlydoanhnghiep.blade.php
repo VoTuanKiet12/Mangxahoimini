@@ -8,29 +8,8 @@
 <div class="dashboard-container" data-aos="fade-down">
     <h2>Quản lý đăng ký doanh nghiệp</h2>
 
-    <div class="dashboard-stats">
-        <a href="{{ route('admin.baiviet') }}">
-            <div class="dashboard-card" data-aos="fade-right">
 
-                <strong>{{ $tongBaiViet }}</strong>
-                <span>Tổng bài viết</span>
 
-            </div>
-        </a>
-        <a href="{{ route('admin.nguoidung') }}">
-            <div class="dashboard-card" data-aos="fade-up">
-                <strong>{{ $tongUser }}</strong>
-                <span>Tổng người đăng</span>
-            </div>
-        </a>
-        <a href="{{ route('admin.doanhnghiep.index') }}">
-            <div class="dashboard-card" data-aos="fade-right">
-                <strong>{{ $tongDoanhNghiep }}</strong>
-                <span>Doanh nghiệp</span>
-            </div>
-        </a>
-    </div>
-    {{-- Thông báo --}}
     @if(session('success'))
     <div class="alert alert-success">{{ session('success') }}</div>
     @endif

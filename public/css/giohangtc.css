@@ -1,6 +1,3 @@
-/* ===== Giỏ hàng chính ===== */
-
-
 .cart-container-page {
     max-width: 72%;
     margin: 20px auto;
@@ -25,7 +22,6 @@ h2 {
     color: #111;
 }
 
-/* ===== Bảng sản phẩm ===== */
 .cart-table {
     flex: 2.2;
     background: #fff;
@@ -72,7 +68,6 @@ h2 {
     background: #fafafa;
 }
 
-/* Ảnh sản phẩm */
 .cart-table img {
     border-radius: 8px;
     width: 100px;
@@ -81,14 +76,12 @@ h2 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
 }
 
-/* Tên sản phẩm */
 .cart-table td.text-start {
     text-align: left;
     font-weight: 500;
     color: #222;
 }
 
-/* ===== Tổng tiền ===== */
 .cart-total {
     text-align: right;
     padding: 20px;
@@ -102,7 +95,6 @@ h2 {
     font-weight: 600;
 }
 
-/* ===== Nút xóa ===== */
 .btn-delete {
     background: none;
     border: none;
@@ -123,30 +115,24 @@ h2 {
     align-items: center;
 }
 
-/* Giá đã giảm */
 .gia-sau-giam {
     color: #e53935;
-    /* đỏ nổi bật */
     font-weight: 600;
     font-size: 16px;
 }
 
-/* Giá gốc (nếu không giảm) */
 .gia-goc {
     color: #333;
     font-weight: 500;
     font-size: 16px;
 }
 
-/* Phần thông tin giảm giá */
 .khuyen-mai {
     color: #2e7d32;
-    /* xanh lá */
     font-size: 13px;
     margin-top: 5px;
 }
 
-/* ===== Sidebar tóm tắt đơn hàng ===== */
 .cart-summary {
     flex: 1;
     background: #fff;
@@ -189,7 +175,6 @@ h2 {
     color: #e74c3c;
 }
 
-/* ===== Nút thanh toán ===== */
 .btn-checkout {
     display: block;
     width: 100%;
@@ -210,7 +195,6 @@ h2 {
     background-color: #ff3344;
 }
 
-/* ===== Nút tăng giảm ===== */
 .quantity-control {
     display: inline-flex;
     align-items: center;
@@ -250,7 +234,6 @@ h2 {
     margin-top: 10px;
 }
 
-/* --- Phân trang --- */
 .pagination-container {
     display: flex;
     justify-content: center;
@@ -302,7 +285,6 @@ h2 {
     cursor: not-allowed;
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 900px) {
     .cart-container-page {
         flex-direction: column;

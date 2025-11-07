@@ -5,12 +5,12 @@
 @section('full')
 <div class="checkout-container">
 
-    {{-- ====== CỘT TRÁI: THÔNG TIN GIAO HÀNG ====== --}}
+
     <div class="checkout-left">
 
         <h1><span class="so">1</span> Thông tin giao hàng</h1>
 
-        {{-- Hiển thị lỗi --}}
+
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul style="margin: 0;">
@@ -74,11 +74,11 @@
         </form>
     </div>
 
-    {{-- ====== CỘT PHẢI: TÓM TẮT ĐƠN HÀNG ====== --}}
+
     <div class="order-summary">
         <h3>Tóm tắt đơn hàng</h3>
 
-        {{-- Danh sách sản phẩm trong giỏ --}}
+
         <div class="summary-images">
             @foreach($gioHang as $item)
             @php
@@ -91,7 +91,7 @@
 
         <hr>
 
-        {{-- Tổng cộng --}}
+
         <div class="order-detail">
             <div class="order-line">
                 <span>Tổng tiền ({{ count($gioHang) }} sản phẩm):</span>

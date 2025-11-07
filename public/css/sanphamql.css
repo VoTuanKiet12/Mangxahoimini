@@ -140,13 +140,11 @@ tr:nth-child(even) {
     width: 100px;
     height: 50px;
     object-fit: contain;
-    /* hiển thị toàn bộ ảnh, giữ nguyên tỉ lệ */
     border-radius: 8px;
     border: 1px solid #ccc;
     display: block;
     margin: 0 auto;
     background-color: #f9f9f9;
-    /* nền nhẹ để dễ nhìn khi ảnh không đủ khung */
 }
 
 .btn-page-go {
@@ -167,12 +165,9 @@ tr:nth-child(even) {
 .pagination-container {
     display: flex;
     justify-content: space-between;
-    /* 👈 form trái, phân trang phải */
     align-items: center;
-    /* 👈 canh giữa theo chiều dọc */
     margin-top: 20px;
     flex-wrap: wrap;
-    /* tránh vỡ layout trên màn nhỏ */
 }
 
 .pagination-form {
@@ -206,7 +201,6 @@ tr:nth-child(even) {
     background-color: #45a049;
 }
 
-/* canh phân trang Laravel sang phải */
 .pagination-links nav {
     display: flex;
     justify-content: flex-end;

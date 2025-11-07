@@ -3,7 +3,7 @@
 </button>
 
 <aside class="sidebar-right" id="sidebarRight">
-    {{-- Lời mời kết bạn --}}
+
     <div class="box-invite">
         <a href="{{ route('ketban.loimoi') }}" style="text-decoration: none; color: inherit;">
             <h3 style="cursor: pointer;">Lời mời kết bạn</h3>
@@ -35,7 +35,7 @@
         @endforelse
     </div>
 
-    {{-- Gợi ý bạn bè --}}
+
     <div class="box-suggest">
         <a href="{{ route('ketban.goi_y') }}" style="text-decoration: none; color: inherit;">
             <h3 style="cursor: pointer;">Gợi ý bạn bè</h3>
@@ -44,7 +44,7 @@
         <a href="{{ route('user.show', $sg->id) }}" style="text-decoration: none;">
 
             <div class="suggest-item">
-                {{-- Thẻ a bao toàn bộ avatar + tên --}}
+
                 <img src="{{ $sg->anh_dai_dien 
                     ? asset('storage/app/public/' . $sg->anh_dai_dien) 
                     : asset('public/uploads/default.png') }}"
@@ -59,7 +59,7 @@
                 </p>
 
 
-                {{-- Nút kết bạn tách riêng --}}
+
                 <form method="POST" action="{{ route('ketban.send', $sg->id) }}">
                     @csrf
                     <button type="submit" class="btn-add-friend">Kết bạn</button>
@@ -72,7 +72,7 @@
         @endforelse
     </div>
 
-    {{-- Danh sách bạn bè --}}
+
     <div class="box-friends">
         <a href="{{ route('ketban.ban_be') }}" style="text-decoration: none; color: inherit;">
             <h3 style="cursor: pointer;">Bạn bè</h3>

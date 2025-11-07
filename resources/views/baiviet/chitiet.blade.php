@@ -7,11 +7,11 @@
 <div class="page-wrapper">
     <div class="post-detail-wrapper">
 
-        {{-- 🖼️ CỘT TRÁI: Bài viết --}}
+
         <div class="post-left">
             <div class="post-box" data-post-id="{{ $baiViet->id }}">
 
-                {{-- Header --}}
+
                 <div class="post-header">
                     <a href="{{ route('user.show', $baiViet->user->id) }}"
                         style="display:flex; align-items:center; gap:10px; text-decoration:none; color:inherit;">
@@ -24,12 +24,12 @@
                     <span class="ngay-tao">{{ \Carbon\Carbon::parse($baiViet->ngay_dang)->format('d/m/Y H:i') }}</span>
                 </div>
 
-                {{-- Nội dung bài viết --}}
+
                 @if($baiViet->noi_dung)
                 <p class="noi-dung-bv">{{ $baiViet->noi_dung }}</p>
                 @endif
 
-                {{-- Ảnh --}}
+
                 @if(!empty($baiViet->hinh_anh) && is_array($baiViet->hinh_anh))
                 @php
                 $images = $baiViet->hinh_anh;
@@ -57,7 +57,7 @@
             </div>
             @endif
 
-            {{-- Video --}}
+
             @if($baiViet->video)
             <div class="video-wrapper">
                 <video class="auto-play-video" controls>
@@ -66,12 +66,12 @@
             </div>
             @endif
 
-            {{-- Reaction --}}
+
             @include('luotthich.reaction', ['post' => $baiViet])
         </div>
     </div>
 
-    {{-- 💬 CỘT PHẢI: Bình luận --}}
+
     <div class="post-right">
         <div class="comments-section">
             <h4>Bình luận</h4>
@@ -91,7 +91,7 @@
                     @csrf
                     <input type="hidden" name="post_id" id="postIdBinhLuan" value="{{ $baiViet->id }}">
 
-                    {{-- 🔹 Xem trước ảnh bình luận --}}
+
                     <div id="previewAnhBinhLuan" class="preview-box" style="display:none;">
                         <img src="" alt="Ảnh bình luận" class="preview-img">
                         <button type="button" id="xoaAnhBinhLuan" title="Xóa ảnh">
@@ -99,7 +99,7 @@
                         </button>
                     </div>
 
-                    {{-- 🔹 Ô nhập bình luận --}}
+
                     <div class="comment-input-area">
                         <label for="chonAnhBinhLuan" class="add-image-btn" title="Thêm ảnh">
                             <i class="bi bi-image"></i>
@@ -119,7 +119,7 @@
 </div>
 @endsection
 
-{{-- 🔧 JS và overlay nên để ngoài section --}}
+
 <div id="imageOverlay" style="display:none;">
     <button id="prevBtn" class="nav-btn" onclick="prevImage()"><i class="bi bi-caret-left-fill"></i></button>
     <img id="overlayImage" src="" alt="Xem ảnh">

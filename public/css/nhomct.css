@@ -94,9 +94,7 @@ body {
 .group-center,
 .group-right {
     -ms-overflow-style: none;
-    /* IE, Edge cũ */
     scrollbar-width: none;
-    /* Firefox */
 }
 
 .group-info h2 {
@@ -155,7 +153,6 @@ body {
 }
 
 
-/* 🔹 Nút chỉnh sửa */
 .btn-edit-group {
     background-color: #353535a1;
     color: white;
@@ -166,7 +163,6 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    /* khoảng cách giữa icon ✏️ và chữ */
     cursor: pointer;
     transition: background-color 0.2s, transform 0.1s;
 }
@@ -174,10 +170,8 @@ body {
 .btn-edit-group:hover {
     background-color: #646464;
     transform: scale(1.05);
-    /* hiệu ứng hover nhẹ */
 }
 
-/* --- Nút rời nhóm --- */
 .btn-leave {
     background: #ff4d4f;
     color: #fff;
@@ -313,7 +307,6 @@ body {
 
 .btn-voice.mute.active {
     background: #dc3545;
-    /* Đỏ cảnh báo */
     color: white;
 }
 
@@ -327,7 +320,6 @@ body {
 
 .btn-voice.audio.active {
     background: #dc3545;
-    /* Đỏ cảnh báo */
     color: white;
 }
 

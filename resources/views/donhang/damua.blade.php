@@ -42,7 +42,7 @@
                 <p class="chu"><strong>Phương thức thanh toán:</strong> {{ ucfirst($donHang->thanhToan->phuong_thuc ?? 'N/A') }}</p>
             </div>
 
-            {{-- ✅ Nút xóa chỉ hiển thị nếu đơn chưa xác nhận hoặc đã hủy --}}
+
             @if(in_array($donHang->trang_thai, ['cho_xac_nhan', 'da_huy']))
             <form action="{{ route('donhang.xoa', $donHang->id) }}" method="POST" onsubmit="return confirm('Bạn có chắc muốn xóa đơn hàng này không?')">
                 @csrf

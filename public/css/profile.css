@@ -88,7 +88,6 @@
     display: inline-block;
 }
 
-/* Các nút chung */
 .btn-add-friendpr,
 .btn-acceptpr,
 .btn-declinepr,
@@ -102,7 +101,6 @@
     transition: all 0.25s ease;
 }
 
-/* Nút “Kết bạn” */
 .btn-add-friendpr {
     background: #36a420;
     color: #fff;
@@ -112,7 +110,6 @@
     background: #6fe757;
 }
 
-/* Nút “Xác nhận” */
 .btn-acceptpr {
     background: #42b72a;
     color: #fff;
@@ -122,7 +119,6 @@
     background: #36a420;
 }
 
-/* Nút “Từ chối” */
 .btn-declinepr {
     background: #e4e6eb;
     color: #333;
@@ -132,7 +128,6 @@
     background: #d8dadf;
 }
 
-/* Nút “Hủy kết bạn” */
 .btn-unfriendpr {
     background: #f02849;
     color: #fff;
@@ -181,7 +176,6 @@
     background: rgba(0, 0, 0, 0.7);
 }
 
-/* --- Ảnh đại diện --- */
 .avatar-wrapper {
     position: relative;
     display: inline-block;

@@ -64,7 +64,6 @@
     font-size: 12px;
 }
 
-/* Form upload story */
 .upload-container {
     position: absolute;
     bottom: 10px;
@@ -158,22 +157,17 @@
     transition: opacity 0.3s ease;
 }
 
-/* 🔹 Riêng ảnh */
 #storyImageViewer {
     object-fit: contain;
-    /* không cắt ảnh */
     background: #000;
 }
 
-/* 🔹 Riêng video */
 #storyVideoViewer {
     object-fit: cover;
-    /* vừa khung, cắt nhẹ viền */
     border: 2px solid rgba(255, 255, 255, 0.2);
     background: #000;
 }
 
-/* Nút điều hướng */
 .story-btn {
     position: absolute;
     background: rgba(255, 255, 255, 0.4);
@@ -217,7 +211,6 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Nội dung overlay */
 .overlaystorychon {
     background-color: #fff;
     margin: 15% auto;

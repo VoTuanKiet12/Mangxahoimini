@@ -63,7 +63,6 @@
     position: relative;
 }
 
-/* Avatar */
 .comment-avatar {
     width: 36px;
     height: 36px;
@@ -90,7 +89,6 @@
 }
 
 
-/* Hiện nút xóa khi hover bình luận */
 
 
 .namebl {
@@ -108,7 +106,6 @@
     padding: 0;
 }
 
-/* nút xóa */
 .delete-comment-btn {
     background: transparent;
     border: none;
@@ -128,7 +125,6 @@
     margin: 0;
 }
 
-/* Thời gian đăng */
 .comment-content small {
     display: block;
     font-size: 12px;
@@ -136,9 +132,7 @@
     margin-top: 3px;
 }
 
-/* ===== NÚT HÀNH ĐỘNG ===== */
 
-/* Nút xóa */
 
 
 #comments-area {
@@ -252,7 +246,6 @@
     padding: 10px;
 }
 
-/* === KHUNG XEM TRƯỚC === */
 .preview-box {
     position: relative;
     align-self: flex-start;
@@ -268,7 +261,6 @@
     border: 1px solid #ccc;
 }
 
-/* Nút xóa ảnh */
 #removePreviewbl {
     position: absolute;
     top: -8px;
@@ -287,7 +279,6 @@
     background: #f8d7da;
 }
 
-/* Khu nhập bình luận */
 .comment-input-area {
     display: flex;
     align-items: center;

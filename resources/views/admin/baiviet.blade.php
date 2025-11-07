@@ -52,7 +52,7 @@
                 <td>{{ $bv->user->username ?? 'Ẩn danh' }}</td>
                 <td>{{ $bv->noi_dung ?? '(Không có nội dung)' }}</td>
                 <td>
-                    {{-- Ảnh --}}
+
                     @php
                     $images = is_array($bv->hinh_anh) ? $bv->hinh_anh : json_decode($bv->hinh_anh, true);
                     @endphp
@@ -63,7 +63,7 @@
                         width="60" style="margin: 3px; border-radius: 6px;">
                     @endforeach
                     @elseif($bv->video)
-                    {{-- Video --}}
+
                     <video width="120" controls>
                         <source src="{{ asset('storage/app/public/' . $bv->video) }}" type="video/mp4">
                         Trình duyệt không hỗ trợ video.
@@ -92,4 +92,6 @@
         {{ $baiViet->links() }}
     </div>
 </div>
+<script src="{{ asset('public/js/hieuungso.js') }}"></script>
+
 @endsection

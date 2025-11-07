@@ -6,12 +6,12 @@
 <div class="container-loai" data-aos="fade-down">
     <h2 class="title">Quản lý loại sản phẩm</h2>
 
-    {{-- Thông báo --}}
+
     @if(session('success'))
     <div class="alert success">{{ session('success') }}</div>
     @endif
 
-    {{-- Form thêm loại --}}
+
     <form action="{{ route('admin.loaisp.them') }}" method="POST" class="form-add">
         @csrf
         <input type="text" name="ten_loai" placeholder="Nhập tên loại sản phẩm..." required>
@@ -19,7 +19,7 @@
         <button type="submit">Thêm loại</button>
     </form>
 
-    {{-- Danh sách loại --}}
+
     <table class="loai-table">
         <thead>
             <tr>

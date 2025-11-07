@@ -54,7 +54,7 @@
                 <td>{{ $user->email }}</td>
                 <td>
 
-                    {{-- Form đổi vai trò --}}
+
                     <form action="{{ route('admin.updateRole', $user->id) }}" method="POST" class="d-inline">
                         @csrf
                         @method('PATCH')
@@ -99,4 +99,8 @@
         {{ $users->links() }}
     </div>
 </div>
+
+<script src="{{ asset('public/js/hieuungso.js') }}"></script>
+
+
 @endsection

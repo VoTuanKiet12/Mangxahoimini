@@ -30,6 +30,10 @@ return new class extends Migration
                 ->references('id')
                 ->on('users')
                 ->onDelete('cascade');
+            $table->foreign('san_pham_id')
+                ->references('id')
+                ->on('san_pham')
+                ->onDelete('set null');
         });
     }
 

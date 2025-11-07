@@ -46,7 +46,6 @@ body {
     min-height: 80vh;
     overflow-x: hidden;
     color: #000;
-    /* ✅ Phủ ngang toàn màn hình */
     width: 100vw;
     position: relative;
     left: 50%;
@@ -64,7 +63,6 @@ body {
 
 }
 
-/* === CỘT TRÁI (BÀI VIẾT) === */
 .post-left {
     flex: 2;
 }
@@ -78,7 +76,6 @@ body {
     height: 800px;
 }
 
-/* Header bài viết */
 .post-header {
     display: flex;
 
@@ -104,7 +101,6 @@ body {
     color: #777;
 }
 
-/* Nội dung bài viết */
 .noi-dung-bv {
     font-size: 15px;
     line-height: 1.6;
@@ -112,7 +108,6 @@ body {
     margin-bottom: 12px;
 }
 
-/* === ẢNH BÀI VIẾT === */
 .image-gallerybvct {
     display: grid;
     gap: 5px;
@@ -134,7 +129,6 @@ body {
     object-fit: cover;
 }
 
-/* Các kiểu hiển thị tùy số lượng ảnh */
 .image-gallerybvct.count-1 {
     grid-template-columns: 1fr;
 }
@@ -222,7 +216,6 @@ body {
     font-weight: 600;
 }
 
-/* Form nhập bình luận */
 .comment-input-area {
     display: flex;
     align-items: flex-end;
@@ -271,7 +264,6 @@ body {
     color: #0056b3;
 }
 
-/* Xem trước ảnh bình luận */
 .preview-box {
     position: relative;
     margin-top: 10px;
@@ -279,7 +271,6 @@ body {
 
 
 
-/* === SCROLL THANH BÌNH LUẬN === */
 .post-right::-webkit-scrollbar {
     width: 6px;
 }
@@ -289,7 +280,6 @@ body {
     border-radius: 10px;
 }
 
-/* === RESPONSIVE === */
 @media (max-width: 992px) {
     .post-detail-wrapper {
         flex-direction: column;
@@ -298,9 +288,7 @@ body {
 
     .post-right {
         max-height: none;
-        /* ✅ bỏ giới hạn chiều cao */
         overflow: visible;
-        /* ✅ hiển thị form bình luận */
     }
 }
 
@@ -312,7 +300,6 @@ body {
     position: relative;
 }
 
-/* Avatar */
 .comment-avatar {
     width: 36px;
     height: 36px;
@@ -338,7 +325,6 @@ body {
 }
 
 
-/* Hiện nút xóa khi hover bình luận */
 
 
 .namebl {
@@ -356,7 +342,6 @@ body {
     padding: 0;
 }
 
-/* nút xóa */
 .delete-comment-btn {
     background: transparent;
     border: none;
@@ -376,7 +361,6 @@ body {
     margin: 0;
 }
 
-/* Thời gian đăng */
 .comment-content small {
     display: block;
     font-size: 12px;
@@ -384,9 +368,7 @@ body {
     margin-top: 3px;
 }
 
-/* ===== NÚT HÀNH ĐỘNG ===== */
 
-/* Nút xóa */
 
 
 #comments-area {
@@ -478,7 +460,6 @@ body {
 }
 
 
-/* === KHUNG XEM TRƯỚC === */
 .preview-box {
     position: relative;
     align-self: flex-start;
@@ -493,7 +474,6 @@ body {
     border: 1px solid #ccc;
 }
 
-/* Nút xóa ảnh */
 #xoaAnhBinhLuan {
     position: absolute;
     top: -8px;
@@ -512,7 +492,6 @@ body {
     background: #f8d7da;
 }
 
-/* Khu nhập bình luận */
 .comment-input-area {
     display: flex;
     align-items: center;
@@ -596,7 +575,6 @@ body {
     background: #ffffff;
     width: 100%;
 
-    /* background: transparent; */
     border-top: 1px solid #ddd;
     padding: 10px;
 }

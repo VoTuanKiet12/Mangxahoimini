@@ -11,7 +11,6 @@
     background-color: #1a1919;
 }
 
-/* === KHUNG TỔNG THỂ === */
 .chat-container {
     background: #ffffff;
     border-radius: 12px;
@@ -31,7 +30,6 @@
     font-weight: 600;
 }
 
-/* === HỘP CHỨA TIN NHẮN === */
 .chat-box {
     border-radius: 10px;
     flex: 1;
@@ -42,7 +40,6 @@
     scroll-behavior: smooth;
 }
 
-/* === MỖI TIN NHẮN === */
 .msg {
     display: block;
     position: relative;
@@ -63,7 +60,6 @@
 }
 
 
-/* === TÊN NGƯỜI GỬI === */
 .msg strong {
     display: block;
     font-size: 13px;
@@ -96,7 +92,6 @@
     font-size: 14px;
     cursor: pointer;
     opacity: 1;
-    /* luôn hiển thị */
     transition: color 0.2s ease;
 }
 
@@ -105,7 +100,6 @@
     text-decoration: underline;
 }
 
-/* === FORM GỬI TIN === */
 #messageForm {
     display: flex;
     align-items: center;
@@ -148,7 +142,6 @@
     background-color: #2980b9;
 }
 
-/* === THANH CUỘN MỀM MẠI === */
 .chat-box::-webkit-scrollbar {
     width: 8px;
 }
@@ -162,7 +155,6 @@
     background: #888;
 }
 
-/* === HIỆU ỨNG HIỂN THỊ === */
 @keyframes fadeInRight {
     from {
         opacity: 0;
@@ -187,7 +179,6 @@
     }
 }
 
-/* === RESPONSIVE CHO MOBILE === */
 @media (max-width: 768px) {
     .msg {
         max-width: 85%;
@@ -235,7 +226,6 @@
     object-fit: cover;
 }
 
-/* Nút tắt ảnh */
 #removeImageBtnnhom {
     display: none;
     position: absolute;

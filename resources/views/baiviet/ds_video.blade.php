@@ -7,7 +7,7 @@
 <div class="container mt-4">
     @forelse($dsVideo as $post)
     <div class="post-box" data-post-id="{{ $post->id }}">
-        {{-- ==== Header: người đăng, ngày, nút xóa ==== --}}
+
         <div class="post-header">
             <a href="{{ route('user.show', $post->user->id) }}"
                 style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 8px;">
@@ -23,7 +23,7 @@
 
             <span class="ngay-tao">{{ \Carbon\Carbon::parse($post->ngay_dang)->format('d/m/Y') }}</span>
 
-            {{-- Nút xóa nếu là chủ bài --}}
+
             @if(Auth::id() === $post->user->id)
             <div class="xoa_bd">
                 <form method="POST"
@@ -38,7 +38,7 @@
             @endif
         </div>
 
-        {{-- ==== Nội dung ==== --}}
+
         @if($post->noi_dung)
         <p class="noi-dung">{{ $post->noi_dung }}</p>
         @endif
@@ -49,7 +49,7 @@
             </a>
         </p>
         @endif
-        {{-- ==== Video ==== --}}
+
         @if($post->video)
         <div class="video-wrapper">
             <video class="auto-play-video" controls muted preload="metadata" loop>
@@ -59,7 +59,7 @@
         </div>
         @endif
 
-        {{-- ==== Phản ứng / Lượt thích ==== --}}
+
         @include('luotthich.reaction', ['post' => $post])
     </div>
     @empty
@@ -77,7 +77,7 @@
                 <p>Đang tải bình luận...</p>
             </div>
         </div>
-        {{-- Form nhập bình luận --}}
+
         @auth
         <form id="commentForm" class="binh_luan" method="POST" enctype="multipart/form-data">
             @csrf

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mạng XH</title>
 
-    {{-- Link CSS --}}
+
     <link rel="stylesheet" href="{{ asset('public/css/index.css') }}">
     <link rel="stylesheet" href="{{ asset('public/css/story.css') }}">
     <link rel="stylesheet" href="{{ asset('public/css/sidebar.css') }}">
@@ -17,7 +17,7 @@
 
 <body>
 
-    {{-- Navbar --}}
+
     @include('layouts.navbar')
 
     @yield('full')

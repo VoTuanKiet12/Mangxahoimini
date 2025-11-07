@@ -1,6 +1,5 @@
-{{-- Story container --}}
 <div class="story-container">
-    {{-- Ô tạo story --}}
+
     <div class="story-item" onclick="openStoryDang()">
         <img class="story-background"
             src="{{ Auth::user()->anh_dai_dien ? asset('storage/app/public/' . Auth::user()->anh_dai_dien) : asset('public/uploads/default.png') }}">
@@ -20,7 +19,7 @@
     $sortedStories = $myStories->concat($otherStories);
     @endphp
 
-    {{-- Danh sách story --}}
+
     @foreach($sortedStories as $story)
     <div class="story-item" onclick="openStory({{ $story->user->id }})">
         @if($story->hinh_anh)
@@ -39,7 +38,7 @@
                 : asset('public/uploads/default.png') }}">
         </div>
         <div class="story-name">{{ $story->user->name ?? $story->user->username }}</div>
-        {{-- ✅ Nút xoá chỉ hiện với story của chính mình --}}
+
         @if($story->user_id === Auth::id())
         <button class="delete-story-btn" onclick="event.stopPropagation(); deleteStory({{ $story->id }})">
             <i class="bi bi-trash3"></i>
@@ -49,7 +48,7 @@
     @endforeach
 </div>
 
-{{-- Overlay chọn loại nội dung --}}
+
 <div id="overlaystorydang" class="overlaystorydang" onclick="if(event.target.id === 'overlaystorydang') closeOverlay()">
     <div class="overlaystorychon" onclick="event.stopPropagation()">
         <h3>Chọn loại nội dung</h3>
@@ -57,7 +56,7 @@
         <button class="btndangstroryvideo" onclick="selectVideo()">Đăng video <i class="bi bi-camera-reels-fill"></i></button>
         <button class="btnhuydangstrory" onclick="closeOverlay()" style="margin-top: 10px;">Hủy</button>
 
-        {{-- Form upload (ẩn) --}}
+
         <form id="storyForm" method="POST" action="{{ route('story.store') }}" enctype="multipart/form-data">
             @csrf
             <input type="file" id="storyImage" name="hinh_anh" accept="image/*" hidden onchange="submitStory()">
@@ -75,7 +74,7 @@
     </div>
 </div>
 
-{{-- ✅ TRUYỀN THỨ TỰ NGƯỜI DÙNG THEO GIAO DIỆN --}}
+
 <script>
     window.storyUserOrder = <?php echo json_encode($sortedStories->pluck('user_id')->unique()->values()); ?>;
     let allStories = <?php echo json_encode($allStories); ?>;

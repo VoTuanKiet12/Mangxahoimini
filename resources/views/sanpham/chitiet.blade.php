@@ -6,7 +6,7 @@
 <div class="product-detail-container">
     <div class="product-detail">
 
-        {{-- === Ảnh sản phẩm === --}}
+
         @php $images = json_decode($sanPham->hinh_anh, true); @endphp
         <div class="image-slider" id="product-{{ $sanPham->id }}">
             <button class="prev-btn"><i class="bi bi-caret-left-fill"></i></button>
@@ -21,7 +21,7 @@
 
 
 
-        {{-- === Thông tin sản phẩm === --}}
+
         <div class="product-info">
             <div class="product-info-if">
                 @php
@@ -62,7 +62,7 @@
 
                 <p><strong>Số lượng:</strong> {{ $sanPham->so_luong }}</p>
                 <p><strong>Doanh nghiệp:</strong> {{ $sanPham->doanhNghiep->ten_cua_hang ?? 'Ẩn danh' }}</p>
-                {{-- === Chọn số lượng === --}}
+
                 <div class="quantity-control-sp"
                     id="quantityControl-sp"
                     data-max="{{ $sanPham->so_luong }}">
@@ -124,7 +124,7 @@
                             <img src="{{ asset('public/storage/' . $img) }}" alt="{{ $sp->ten_san_pham }}">
                             <div class="related-info">
                                 <p class="ten">{{ $sp->ten_san_pham }}</p>
-                                {{-- ✅ Hiển thị giá có khuyến mãi nếu có --}}
+
                                 @if ($sp->khuyenMaiHienTai)
                                 <p class="gia">
                                     <span class="old-gia" style="text-decoration: line-through; color: #888;">
@@ -224,7 +224,7 @@
                     <p class="no-review">Chưa có đánh giá nào cho sản phẩm này.</p>
                     @endforelse
                 </div>
-                {{-- ✅ Form gửi đánh giá --}}
+
                 @auth
                 <form action="{{ route('danhgia.store') }}" method="POST" class="review-form" enctype="multipart/form-data">
                     @csrf
@@ -243,7 +243,7 @@
 
                     <textarea name="noi_dung" rows="3" placeholder="Viết đánh giá của bạn..." required></textarea>
 
-                    {{-- 🖼️ Thêm ảnh đánh giá --}}
+
                     <div class="review-image-upload">
                         <label for="hinh_anh" class="btn-upload-image">
                             <i class="bi bi-image-fill"> Up ảnh</i>
@@ -295,7 +295,8 @@
 </script>
 <script>
     function themVaoGioHang(sanPhamId) {
-        // Gọi API thêm vào giỏ hàng
+        const quantity = parseInt(document.getElementById("qtyValue-sp")?.textContent || 1);
+
         fetch("{{ route('giohang.them') }}", {
                 method: "POST",
                 headers: {
@@ -304,7 +305,7 @@
                 },
                 body: JSON.stringify({
                     san_pham_id: sanPhamId,
-                    so_luong: 1
+                    so_luong: quantity
                 })
             })
             .then(res => res.json())

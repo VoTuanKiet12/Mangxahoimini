@@ -6,7 +6,7 @@
         <h3>Danh sách bạn bè</h3>
         @forelse($friendList as $banbe)
         <a href="{{ route('user.show', $banbe->id) }}" class="dsfriend-item">
-            {{-- Avatar + Tên --}}
+
             <div class="dsfriend-info">
                 <img src="{{ $banbe->anh_dai_dien 
                     ? asset('storage/app/public/' . $banbe->anh_dai_dien) 
@@ -17,7 +17,7 @@
                 <span class="dsfriend-name">{{ $banbe->name ?? $banbe->username }}</span>
             </div>
 
-            {{-- Nút hủy kết bạn (đặt bên phải) --}}
+
             <form method="POST" action="{{ route('ketban.cancel', $banbe->id) }}" class="friend-actions"
                 onclick="event.stopPropagation();">
                 @csrf

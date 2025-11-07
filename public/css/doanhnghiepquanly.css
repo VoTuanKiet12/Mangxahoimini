@@ -55,7 +55,6 @@ body {
     overflow: hidden;
 }
 
-/* Sidebar bên trái */
 .business-links {
     width: 280px;
     background-color: #fffffff3;
@@ -115,7 +114,6 @@ body {
     margin-right: 8px;
 }
 
-/* Nội dung bên phải */
 .business-content {
     flex: 1;
     padding: 40px;
@@ -135,7 +133,6 @@ body {
 
 
 
-/* Hiệu ứng responsive */
 @media (max-width: 768px) {
     .business-container {
         flex-direction: column;
